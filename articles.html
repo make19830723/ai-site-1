@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全部文章 · 100 篇 AI 工具教程 | AI 咨询</title>
+  <meta name="description" content="100 篇 AI 工具实战教程，覆盖 AI 写作、图像设计、视频制作、编程开发、办公效率、音频语音、营销获客、数据分析八大场景，中英双语。">
+  <meta name="keywords" content="AI工具教程,AI写作,Midjourney,Sora,Cursor,AI PPT,AI数据分析,中英双语">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232f6df6'/><text x='50' y='70' font-size='62' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>A</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header" data-header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">A</span>
+        <span>AI 咨询</span>
+      </a>
+      <nav class="nav-menu" data-nav-menu>
+        <a href="index.html#home" data-i18n="nav.home">首页</a>
+        <a href="articles.html" data-i18n="nav.articles">文章</a>
+        <a href="index.html#about" data-i18n="nav.about">关于</a>
+        <a href="index.html#contact" data-i18n="nav.contact">联系</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-switch" data-lang-switch data-i18n="lang.switch">EN</button>
+        <a href="index.html#contact" class="btn btn-primary" data-i18n="nav.cta">免费咨询</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="articles.title">全部文章</h2>
+        <p data-i18n="articles.subtitle">100 篇 AI 工具实战教程，覆盖八大应用场景。</p>
+        <div class="posts-count-line">
+          <span data-i18n="articles.total">共</span>
+          <strong data-posts-count>100</strong>
+          <span data-i18n="articles.unit">篇文章</span>
+        </div>
+      </div>
+
+      <!-- 分类筛选条 -->
+      <div class="filters" data-filters data-filter="all"></div>
+
+      <!-- 文章卡片网格 -->
+      <div class="articles-grid" data-posts-grid data-filter="all" data-posts-section></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">
+            <span class="logo-mark">A</span>
+            <span>AI 咨询</span>
+          </div>
+          <p class="footer-tagline" data-i18n="footer.tagline">用 AI 驱动业务持续增长</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav">导航</h4>
+          <a href="index.html#home" data-i18n="nav.home">首页</a>
+          <a href="articles.html" data-i18n="nav.articles">文章</a>
+          <a href="index.html#about" data-i18n="nav.about">关于</a>
+          <a href="index.html#contact" data-i18n="nav.contact">联系</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow">关注我们</h4>
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">X / Twitter</a>
+          <a href="#">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 AI 咨询. 保留所有权利.</span>
+        <span data-i18n="footer.icp"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/posts-categories.js"></script>
+  <script src="js/posts-data.js"></script>
+  <script src="js/posts-content.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/posts-base.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.__posts) {
+        var lang = window.__i18n.getLang();
+        window.__posts.renderFilters(lang);
+        window.__posts.renderList(lang);
+      }
+    });
+  </script>
+</body>
+</html>

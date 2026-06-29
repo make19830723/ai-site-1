@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title / description / og / keywords / JSON-LD 由 posts-base.js 动态注入 -->
+  <title>AI 工具教程 | AI 咨询</title>
+  <meta name="description" content="AI 工具使用场景教程，覆盖写作、图像、视频、编程、办公、音频、营销、数据等领域。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232f6df6'/><text x='50' y='70' font-size='62' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>A</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header class="header" data-header>
+    <div class="container header-inner">
+      <a href="/index.html" class="logo">
+        <span class="logo-mark">A</span>
+        <span>AI 咨询</span>
+      </a>
+      <nav class="nav-menu" data-nav-menu>
+        <a href="/index.html#home" data-i18n="nav.home">首页</a>
+        <a href="/articles.html" data-i18n="nav.articles">文章</a>
+        <a href="/index.html#about" data-i18n="nav.about">关于</a>
+        <a href="/index.html#contact" data-i18n="nav.contact">联系</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-switch" data-lang-switch data-i18n="lang.switch">EN</button>
+        <a href="/index.html#contact" class="btn btn-primary" data-i18n="nav.cta">免费咨询</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 文章内容挂载点: posts-base.js 根据 ?slug= 渲染 -->
+  <main data-post-mount>
+    <div class="container article-wrap" style="padding:80px 0">
+      <p style="color:var(--c-text-mute)">Loading…</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 AI 咨询. 保留所有权利.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 数据 + 逻辑 (顺序固定) -->
+  <script src="/js/i18n.js"></script>
+  <script src="/js/posts-categories.js"></script>
+  <script src="/js/posts-data.js"></script>
+  <script src="/js/posts-content.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/posts-base.js"></script>
+  <script>
+    // 首次进入立即渲染 (main.js 的 DOMContentLoaded 已触发 langchange, 但此处兜底)
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.__posts) window.__posts.renderDetail(window.__i18n.getLang());
+    });
+  </script>
+</body>
+</html>
