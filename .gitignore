@@ -1,0 +1,29 @@
+# 依赖
+node_modules/
+.pnp
+.pnp.js
+
+# 构建产物
+dist/
+build/
+out/
+.vercel/
+
+# 本地环境
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 环境变量 (切勿提交真实密钥)
+.env
+.env.local
+.env.*.local
