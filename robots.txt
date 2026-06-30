@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ai-site-1.vercel.app/sitemap.xml
+Sitemap: https://ai-site-1-ten.vercel.app/sitemap.xml
