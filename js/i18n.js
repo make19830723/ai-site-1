@@ -15,6 +15,8 @@ window.I18N = {
     // Hero
     "hero.badge": "AI 咨询 · 洞见 · 实践",
     "hero.title": "用 AI 重塑你的业务增长",
+    "hero.title.main": "用 AI 重塑你的",
+    "hero.title.hl": "业务增长",
     "hero.subtitle": "我们分享前沿的人工智能落地经验，帮助企业将 AI 真正转化为生产力。",
     "hero.cta1": "浏览文章",
     "hero.cta2": "预约咨询",
@@ -91,6 +93,8 @@ window.I18N = {
 
     "hero.badge": "AI Consulting · Insights · Practice",
     "hero.title": "Reshape Your Growth with AI",
+    "hero.title.main": "Reshape Your ",
+    "hero.title.hl": "Growth with AI",
     "hero.subtitle": "We share hands-on experience in applied AI, helping enterprises turn AI into real productivity.",
     "hero.cta1": "Browse Articles",
     "hero.cta2": "Book a Consult",

@@ -47,6 +47,13 @@
     var filter = grid.getAttribute("data-filter") || "all";
     var list = filter === "all" ? POSTS : POSTS.filter(function (p) { return p.cat === filter; });
 
+    // 首页等可通过 data-limit 限制渲染条数 (列表页留空则全量)
+    var limitAttr = grid.getAttribute("data-limit");
+    if (limitAttr) {
+      var n = parseInt(limitAttr, 10);
+      if (!isNaN(n) && n > 0) list = list.slice(0, n);
+    }
+
     var html = "";
     for (var i = 0; i < list.length; i++) {
       var p = list[i];

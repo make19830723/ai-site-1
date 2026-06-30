@@ -49,76 +49,8 @@
     var switcher = document.querySelector("[data-lang-switch]");
     if (switcher) switcher.textContent = lang === "zh" ? "EN" : "中";
 
-    // 重新渲染文章卡片 (依赖语言)
-    renderArticles(lang);
-
-    // 渲染文章详情页内容 (如有)
-    renderArticleContent(lang);
-
-    // 通知文章详情页同步
+    // 通知文章系统 (posts-base.js) 按新语言重渲染列表/详情
     document.dispatchEvent(new CustomEvent("langchange", { detail: { lang: lang } }));
-  }
-
-  /* ---------- 文章详情页正文注入 ---------- */
-  function renderArticleContent(lang) {
-    var body = document.querySelector("[data-article-body]");
-    if (!body || !window.ARTICLE_CONTENT) return;
-
-    var id = body.getAttribute("data-id");
-    var content = window.ARTICLE_CONTENT[id];
-    if (!content) return;
-
-    body.innerHTML = content[lang] || content.zh;
-
-    // 同步标题 / 分类 / 日期 (从 ARTICLES 元数据)
-    if (window.ARTICLES) {
-      for (var i = 0; i < window.ARTICLES.length; i++) {
-        if (window.ARTICLES[i].id === id) {
-          var a = window.ARTICLES[i];
-          var t = document.querySelector("[data-article-title]");
-          if (t) t.textContent = a.title[lang];
-          var c = document.querySelector("[data-article-cat]");
-          if (c) c.textContent = a.category[lang];
-          var d = document.querySelector("[data-article-date]");
-          if (d) d.textContent = a.date;
-          break;
-        }
-      }
-    }
-    document.title = (content.__title && content.__title[lang]) || document.title;
-  }
-
-  /* ---------- 文章卡片 ---------- */
-  function renderArticles(lang) {
-    var grid = document.querySelector("[data-articles-grid]");
-    if (!grid || !window.ARTICLES) return;
-
-    // 仅首页渲染前 N 篇; 列表页渲染全部
-    var limit = grid.getAttribute("data-limit");
-    var list = limit ? window.ARTICLES.slice(0, parseInt(limit, 10)) : window.ARTICLES;
-
-    var html = "";
-    for (var i = 0; i < list.length; i++) {
-      var a = list[i];
-      html +=
-        '<article class="card">' +
-        '  <a class="card-cover" href="' + a.file + '">' +
-        '    <img src="' + a.cover + '" alt="" loading="lazy">' +
-        "  </a>" +
-        '  <div class="card-body">' +
-        '    <div class="card-meta">' +
-        '      <span class="tag">' + a.category[lang] + "</span>" +
-        '      <time>' + a.date + "</time>" +
-        "    </div>" +
-        '    <h3 class="card-title">' + a.title[lang] + "</h3>" +
-        '    <p class="card-excerpt">' + a.excerpt[lang] + "</p>" +
-        '    <a class="card-link" href="' + a.file + '">' +
-        window.I18N[lang]["articles.readmore"] +
-        "    </a>" +
-        "  </div>" +
-        "</article>";
-    }
-    grid.innerHTML = html;
   }
 
   /* ---------- 移动端菜单 ---------- */
