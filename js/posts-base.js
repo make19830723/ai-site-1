@@ -29,8 +29,11 @@
   }
 
   function articleUrl(slug) {
-    // 干净 URL: /p/<slug>  (vercel.json 已配置 rewrite 到 /p/article.html?slug=)
-    return "/p/" + slug;
+    // 直接指向真实文件 /p/article.html?slug=<slug>
+    // 这样本地、任意 HTTP 服务器、Vercel 均可正常打开(无需 rewrite 依赖)。
+    // 同时 vercel.json 已配置 /p/:slug -> /p/article.html?slug=:slug 的 rewrite,
+    // 因此线上访问 /p/<slug> 这种干净 URL 也会被正确解析。
+    return "/p/article.html?slug=" + encodeURIComponent(slug);
   }
 
   function escapeHtml(s) {
