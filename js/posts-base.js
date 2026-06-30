@@ -2,7 +2,7 @@
  * 文章系统核心逻辑 (100 篇数据驱动)
  * - 列表渲染 + 分类筛选
  * - 详情页动态渲染 (标题/正文/SEO meta/JSON-LD)
- * - 文案自动随语言切换
+ * - 词条自动随语言切换
  *
  * 依赖: posts-data.js (POSTS, POST_CATEGORIES), posts-content.js (POST_CONTENT, 可选)
  */

@@ -1,6 +1,6 @@
 /**
- * 双语文案数据 (zh / en)
- * 新增文案: 在两份对象里保持 key 一一对应即可。
+ * 双语词条数据 (zh / en)
+ * 新增词条: 在两份对象里保持 key 一一对应即可。
  */
 window.I18N = {
   zh: {
@@ -22,11 +22,9 @@ window.I18N = {
     "hero.cta2": "预约咨询",
 
     // 统计
-    "stat.clients": "服务客户",
-    "stat.clients.suffix": "+",
-    "stat.articles": "深度文章",
-    "stat.experience": "行业经验",
-    "stat.experience.suffix": "年",
+    "stat.articles": "实战文章",
+    "stat.categories": "应用场景",
+    "stat.langs": "双语对照",
 
     // 服务
     "services.title": "我们提供什么",
@@ -99,11 +97,9 @@ window.I18N = {
     "hero.cta1": "Browse Articles",
     "hero.cta2": "Book a Consult",
 
-    "stat.clients": "Clients Served",
-    "stat.clients.suffix": "+",
-    "stat.articles": "In-depth Articles",
-    "stat.experience": "Years Experience",
-    "stat.experience.suffix": "",
+    "stat.articles": "Practical Articles",
+    "stat.categories": "Use Cases",
+    "stat.langs": "Bilingual",
 
     "services.title": "What We Offer",
     "services.subtitle": "End-to-end AI consulting, from strategy to execution.",

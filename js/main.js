@@ -1,7 +1,7 @@
 /**
  * 主交互逻辑
  * - 语言切换 (含 localStorage 记忆)
- * - 文案自动渲染
+ * - 词条自动渲染
  * - 文章卡片渲染
  * - 表单校验与提交
  */
@@ -45,7 +45,7 @@
       if (dict[pk] != null) pe.setAttribute("placeholder", dict[pk]);
     }
 
-    // 切换按钮文案
+    // 切换按钮文字
     var switcher = document.querySelector("[data-lang-switch]");
     if (switcher) switcher.textContent = lang === "zh" ? "EN" : "中";
 

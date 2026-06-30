@@ -2,7 +2,7 @@
  * 文章分类定义 (中英双语)
  */
 window.POST_CATEGORIES = {
-  writing:      { zh: "AI 写作文案", en: "AI Writing" },
+  writing:      { zh: "AI 写作实战", en: "AI Writing" },
   image:        { zh: "AI 图像设计", en: "AI Image & Design" },
   video:        { zh: "AI 视频制作", en: "AI Video" },
   coding:       { zh: "AI 编程开发", en: "AI Coding" },

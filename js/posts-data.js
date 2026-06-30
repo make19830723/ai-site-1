@@ -15,9 +15,9 @@
 window.POSTS = [
   { slug: "chatgpt-writing-prompt-guide", cat: "writing", read: 8, date: "2026-06-25",
     cover: "/images/chatgpt-writing-prompt-guide.jpg",
-    title: { zh: "ChatGPT 提示词写作指南：7 个技巧写出高质量 AI 文案", en: "ChatGPT Prompt Writing Guide: 7 Tips for High-Quality AI Copy" },
-    description: { zh: "掌握 ChatGPT 提示词写作技巧，学会用角色设定、结构化指令和迭代优化，让 AI 写出专业级文案，附实用提示词模板。", en: "Master ChatGPT prompt techniques—role setup, structured instructions, and iterative refinement—to produce professional copy. Includes ready-to-use templates." },
-    keywords: { zh: "ChatGPT提示词, AI写作, AI文案, 提示词技巧, prompt工程", en: "ChatGPT prompts, AI writing, prompt engineering, AI copywriting, prompt tips" } },
+    title: { zh: "ChatGPT 提示词写作指南：7 个技巧写出高质量 AI 写作", en: "ChatGPT Prompt Writing Guide: 7 Tips for High-Quality AI Copy" },
+    description: { zh: "掌握 ChatGPT 提示词写作技巧，学会用角色设定、结构化指令和迭代优化，让 AI 写出专业级内容，附实用提示词模板。", en: "Master ChatGPT prompt techniques—role setup, structured instructions, and iterative refinement—to produce professional copy. Includes ready-to-use templates." },
+    keywords: { zh: "ChatGPT提示词, AI写作, AI写作, 提示词技巧, prompt工程", en: "ChatGPT prompts, AI writing, prompt engineering, AI copywriting, prompt tips" } },
 
   { slug: "ai-write-blog-post-fast", cat: "writing", read: 7, date: "2026-06-24",
     cover: "/images/ai-write-blog-post-fast.jpg",
@@ -27,9 +27,9 @@ window.POSTS = [
 
   { slug: "ai-xiaohongshu-copywriting", cat: "writing", read: 6, date: "2026-06-23",
     cover: "/images/ai-xiaohongshu-copywriting.jpg",
-    title: { zh: "小红书 AI 文案怎么写？爆款笔记标题与正文模板", en: "How to Write Xiaohongshu Copy with AI: Viral Title & Body Templates" },
-    description: { zh: "小红书爆款 AI 文案写作方法：标题公式、钩子开头、emoji 排版与标签策略，附可直接套用的提示词。", en: "Viral Xiaohongshu AI copywriting: title formulas, hook openings, emoji formatting, and tag strategies with copy-paste prompts." },
-    keywords: { zh: "小红书AI文案, 爆款文案, 小红书标题, AI写笔记", en: "Xiaohongshu copy, viral copywriting, RED titles, AI note writing" } },
+    title: { zh: "小红书 AI 内容怎么写？爆款笔记标题与正文模板", en: "How to Write Xiaohongshu Copy with AI: Viral Title & Body Templates" },
+    description: { zh: "小红书爆款 AI 内容写作方法：标题公式、钩子开头、emoji 排版与标签策略，附可直接套用的提示词。", en: "Viral Xiaohongshu AI copywriting: title formulas, hook openings, emoji formatting, and tag strategies with copy-paste prompts." },
+    keywords: { zh: "小红书AI写作, 爆款内容, 小红书标题, AI写笔记", en: "Xiaohongshu copy, viral copywriting, RED titles, AI note writing" } },
 
   { slug: "ai-business-email-templates", cat: "writing", read: 5, date: "2026-06-22",
     cover: "/images/ai-business-email-templates.jpg",
@@ -57,7 +57,7 @@ window.POSTS = [
 
   { slug: "ai-product-description-generator", cat: "writing", read: 6, date: "2026-06-18",
     cover: "/images/ai-product-description-generator.jpg",
-    title: { zh: "AI 商品详情页文案生成：电商高转化描述怎么写", en: "AI Product Description Generator: High-Conversion E-commerce Copy" },
-    description: { zh: "用 AI 生成电商商品文案：卖点提炼、痛点挖掘、场景化描述，提升详情页转化率，附提示词模板。", en: "Generate e-commerce copy with AI: extract selling points, address pain points, and boost conversion with prompt templates." },
-    keywords: { zh: "AI商品文案, 电商文案, 详情页文案, 高转化文案", en: "AI product copy, e-commerce copywriting, product descriptions, conversion copy" } }
+    title: { zh: "AI 商品详情页描述生成：电商高转化描述怎么写", en: "AI Product Description Generator: High-Conversion E-commerce Copy" },
+    description: { zh: "用 AI 生成电商商品描述：卖点提炼、痛点挖掘、场景化描述，提升详情页转化率，附提示词模板。", en: "Generate e-commerce copy with AI: extract selling points, address pain points, and boost conversion with prompt templates." },
+    keywords: { zh: "AI商品描述, 电商描述, 详情页描述, 高转化描述", en: "AI product copy, e-commerce copywriting, product descriptions, conversion copy" } }
 ];
