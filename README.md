@@ -9,33 +9,41 @@
 ## ✨ 特性
 
 - 🌍 **中英双语**一键切换，自动记忆用户语言偏好
-- 📝 **内容站结构**：首页 + 文章列表 + 文章详情
+- 📝 **内容站结构**：首页（最新文章）+ 文章列表（分类筛选）+ 文章详情（数据驱动）
 - 🎨 **简洁商务白**设计，响应式适配手机/平板/桌面
+- 🔍 **SEO 友好**：干净 URL、动态 meta、Open Graph、JSON-LD 结构化数据、sitemap.xml
 - ⚡ **零依赖零构建**：推送即部署，Vercel 免费套餐完全够用
 - 🔒 默认开启安全响应头（X-Frame-Options、Referrer-Policy 等）
 - 🚀 静态资源长期缓存，加载性能优秀
+
+> ⚠️ 部署前请把 `sitemap.xml` 和 `robots.txt` 中的 `https://ai-site-1.vercel.app` 替换为你的正式域名。
 
 ---
 
 ## 📂 项目结构
 
 ```
-网站1/
-├── index.html              # 首页
-├── articles.html           # 文章列表页
-├── vercel.json             # Vercel 部署配置
+ai-site-1/
+├── index.html              # 首页（最新文章预览，data-limit 限制条数）
+├── articles.html           # 文章列表页（分类筛选 + 全量展示）
+├── favicon.svg             # 站点图标
+├── robots.txt              # 爬虫规则 + sitemap 声明
+├── sitemap.xml             # 站点地图（由文章数据生成）
+├── vercel.json             # Vercel 部署配置（含 /p/<slug> rewrite）
 ├── css/
 │   └── style.css           # 全局样式
 ├── js/
-│   ├── i18n.js             # 双语文案数据
-│   ├── articles.js         # 文章元数据
-│   ├── article-content.js  # 文章正文（双语）
-│   └── main.js             # 主交互逻辑
-└── articles/
-    ├── ai-reshape-enterprise.html
-    ├── rag-production-guide.html
-    └── ai-roi-framework.html
+│   ├── i18n.js             # 双语文案数据 (zh / en)
+│   ├── posts-categories.js # 文章分类定义（双语）
+│   ├── posts-data.js       # 文章元数据（slug/标题/描述/封面等）
+│   ├── posts-content.js    # 文章正文（按 slug 索引，双语）
+│   ├── posts-base.js       # 文章系统核心（列表/详情/SEO/JSON-LD）
+│   └── main.js             # 主交互（语言切换、导航、表单、数字动画）
+└── p/
+    └── article.html        # 文章详情模板（由 posts-base.js 按 ?slug= 渲染）
 ```
+
+> 文章系统为**数据驱动**：详情页统一走 `/p/<slug>` → 经 `vercel.json` rewrite 到 `p/article.html?slug=<slug>`，由 `posts-base.js` 动态渲染。无需为每篇文章单独建 HTML 文件。
 
 ---
 
@@ -90,9 +98,12 @@ git push
 编辑 `js/i18n.js`，在 `zh` 与 `en` 两个对象中同步修改对应 key。
 
 ### 新增一篇文章
-1. 在 `js/articles.js` 的 `ARTICLES` 数组里追加一条元数据。
-2. 在 `js/article-content.js` 的 `ARTICLE_CONTENT` 对象里追加对应的双语正文。
-3. 在 `articles/` 目录下复制一个现有的 `.html` 文件，改文件名和 `<title>`，并把 `data-id` 改成你的新文章 id。
+1. 在 `js/posts-data.js` 的 `POSTS` 数组里追加一条元数据（包含 `slug`、`cat`、`title`、`description`、`keywords`、`cover`、`date`、`read`）。
+2. 在 `js/posts-content.js` 的 `POST_CONTENT` 对象里按 `slug` 追加双语正文（`zh` / `en`，HTML 片段）。
+3. （可选）在 `sitemap.xml` 追加一行 `<loc>https://你的域名/p/<slug></loc>`。
+4. 无需新建 HTML 文件 —— 详情页由 `p/article.html` 统一渲染。
+
+> 分类：在 `js/posts-categories.js` 维护。筛选条会自动隐藏没有文章的分类。
 
 ### 接入真实的联系表单
 默认表单仅做前端校验。要真正接收提交，二选一：
