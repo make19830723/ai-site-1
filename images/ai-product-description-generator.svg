@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="商品文案 高转化">
+  <defs>
+    <linearGradient id="g_ai_product_description_generator" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c2410c"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="r_g_ai_product_description_generator" cx="0.8" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g_ai_product_description_generator)"/>
+  <rect width="1280" height="720" fill="url(#r_g_ai_product_description_generator)"/>
+  <!-- 装饰圆点矩阵 -->
+  <g fill="#ffffff" opacity="0.08">
+    <circle cx="760" cy="460" r="3"/>
+    <circle cx="816" cy="460" r="3"/>
+    <circle cx="872" cy="460" r="3"/>
+    <circle cx="928" cy="460" r="3"/>
+    <circle cx="984" cy="460" r="3"/>
+    <circle cx="1040" cy="460" r="3"/>
+    <circle cx="1096" cy="460" r="3"/>
+    <circle cx="1152" cy="460" r="3"/>
+    <circle cx="1208" cy="460" r="3"/>
+    <circle cx="760" cy="504" r="3"/>
+    <circle cx="816" cy="504" r="3"/>
+    <circle cx="872" cy="504" r="3"/>
+    <circle cx="928" cy="504" r="3"/>
+    <circle cx="984" cy="504" r="3"/>
+    <circle cx="1040" cy="504" r="3"/>
+    <circle cx="1096" cy="504" r="3"/>
+    <circle cx="1152" cy="504" r="3"/>
+    <circle cx="1208" cy="504" r="3"/>
+    <circle cx="760" cy="548" r="3"/>
+    <circle cx="816" cy="548" r="3"/>
+    <circle cx="872" cy="548" r="3"/>
+    <circle cx="928" cy="548" r="3"/>
+    <circle cx="984" cy="548" r="3"/>
+    <circle cx="1040" cy="548" r="3"/>
+    <circle cx="1096" cy="548" r="3"/>
+    <circle cx="1152" cy="548" r="3"/>
+    <circle cx="1208" cy="548" r="3"/>
+    <circle cx="760" cy="592" r="3"/>
+    <circle cx="816" cy="592" r="3"/>
+    <circle cx="872" cy="592" r="3"/>
+    <circle cx="928" cy="592" r="3"/>
+    <circle cx="984" cy="592" r="3"/>
+    <circle cx="1040" cy="592" r="3"/>
+    <circle cx="1096" cy="592" r="3"/>
+    <circle cx="1152" cy="592" r="3"/>
+    <circle cx="1208" cy="592" r="3"/>
+    <circle cx="760" cy="636" r="3"/>
+    <circle cx="816" cy="636" r="3"/>
+    <circle cx="872" cy="636" r="3"/>
+    <circle cx="928" cy="636" r="3"/>
+    <circle cx="984" cy="636" r="3"/>
+    <circle cx="1040" cy="636" r="3"/>
+    <circle cx="1096" cy="636" r="3"/>
+    <circle cx="1152" cy="636" r="3"/>
+    <circle cx="1208" cy="636" r="3"/>
+  </g>
+  <!-- 右侧主题图形 -->
+  <g transform="translate(900,360)">
+    
+        <g transform="translate(-110,-80)">
+          <rect x="0" y="0" width="220" height="160" rx="14" fill="#fff" opacity="0.95"/>
+          <line x1="24" y1="130" x2="200" y2="130" stroke="#c2410c" stroke-width="2" opacity="0.4"/>
+          <rect x="40" y="80" width="28" height="50" rx="4" fill="#ea580c" opacity="0.55"/>
+          <rect x="80" y="60" width="28" height="70" rx="4" fill="#ea580c" opacity="0.7"/>
+          <rect x="120" y="40" width="28" height="90" rx="4" fill="#ea580c" opacity="0.85"/>
+          <rect x="160" y="24" width="28" height="106" rx="4" fill="#ea580c"/>
+          <polyline points="54,90 94,70 134,50 174,34" fill="none" stroke="#c2410c" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="54" cy="90" r="4" fill="#c2410c"/><circle cx="94" cy="70" r="4" fill="#c2410c"/>
+          <circle cx="134" cy="50" r="4" fill="#c2410c"/><circle cx="174" cy="34" r="4" fill="#c2410c"/>
+        </g>
+  </g>
+  <!-- 左侧文字 -->
+  <g>
+    <text x="96" y="300" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="2">商品文案</text>
+    <text x="100" y="372" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="34" font-weight="500" fill="#ffffff" opacity="0.85">高转化</text>
+    <rect x="100" y="410" width="120" height="5" rx="2.5" fill="#ffffff" opacity="0.9"/>
+    <text x="100" y="470" font-family="Arial,sans-serif" font-size="22" font-weight="600" fill="#ffffff" opacity="0.6" letter-spacing="3">AI · TECH GUIDE</text>
+  </g>
+</svg>

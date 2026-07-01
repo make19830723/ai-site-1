@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Suno v5 AI 作曲">
+  <defs>
+    <linearGradient id="g_suno_v5_music_generation" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9d174d"/>
+      <stop offset="1" stop-color="#db2777"/>
+    </linearGradient>
+    <radialGradient id="r_g_suno_v5_music_generation" cx="0.8" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g_suno_v5_music_generation)"/>
+  <rect width="1280" height="720" fill="url(#r_g_suno_v5_music_generation)"/>
+  <!-- 装饰圆点矩阵 -->
+  <g fill="#ffffff" opacity="0.08">
+    <circle cx="760" cy="460" r="3"/>
+    <circle cx="816" cy="460" r="3"/>
+    <circle cx="872" cy="460" r="3"/>
+    <circle cx="928" cy="460" r="3"/>
+    <circle cx="984" cy="460" r="3"/>
+    <circle cx="1040" cy="460" r="3"/>
+    <circle cx="1096" cy="460" r="3"/>
+    <circle cx="1152" cy="460" r="3"/>
+    <circle cx="1208" cy="460" r="3"/>
+    <circle cx="760" cy="504" r="3"/>
+    <circle cx="816" cy="504" r="3"/>
+    <circle cx="872" cy="504" r="3"/>
+    <circle cx="928" cy="504" r="3"/>
+    <circle cx="984" cy="504" r="3"/>
+    <circle cx="1040" cy="504" r="3"/>
+    <circle cx="1096" cy="504" r="3"/>
+    <circle cx="1152" cy="504" r="3"/>
+    <circle cx="1208" cy="504" r="3"/>
+    <circle cx="760" cy="548" r="3"/>
+    <circle cx="816" cy="548" r="3"/>
+    <circle cx="872" cy="548" r="3"/>
+    <circle cx="928" cy="548" r="3"/>
+    <circle cx="984" cy="548" r="3"/>
+    <circle cx="1040" cy="548" r="3"/>
+    <circle cx="1096" cy="548" r="3"/>
+    <circle cx="1152" cy="548" r="3"/>
+    <circle cx="1208" cy="548" r="3"/>
+    <circle cx="760" cy="592" r="3"/>
+    <circle cx="816" cy="592" r="3"/>
+    <circle cx="872" cy="592" r="3"/>
+    <circle cx="928" cy="592" r="3"/>
+    <circle cx="984" cy="592" r="3"/>
+    <circle cx="1040" cy="592" r="3"/>
+    <circle cx="1096" cy="592" r="3"/>
+    <circle cx="1152" cy="592" r="3"/>
+    <circle cx="1208" cy="592" r="3"/>
+    <circle cx="760" cy="636" r="3"/>
+    <circle cx="816" cy="636" r="3"/>
+    <circle cx="872" cy="636" r="3"/>
+    <circle cx="928" cy="636" r="3"/>
+    <circle cx="984" cy="636" r="3"/>
+    <circle cx="1040" cy="636" r="3"/>
+    <circle cx="1096" cy="636" r="3"/>
+    <circle cx="1152" cy="636" r="3"/>
+    <circle cx="1208" cy="636" r="3"/>
+  </g>
+  <!-- 右侧主题图形 -->
+  <g transform="translate(900,360)">
+    
+        <g transform="translate(-130,0)">
+          <rect x="0" y="-8" width="14" height="16" rx="7" fill="#fff" opacity="0.4"/>
+          <rect x="24" y="-24" width="14" height="48" rx="7" fill="#fff" opacity="0.55"/>
+          <rect x="48" y="-50" width="14" height="100" rx="7" fill="#fff" opacity="0.85"/>
+          <rect x="72" y="-30" width="14" height="60" rx="7" fill="#fff" opacity="0.65"/>
+          <rect x="96" y="-60" width="14" height="120" rx="7" fill="#fff"/>
+          <rect x="120" y="-40" width="14" height="80" rx="7" fill="#fff" opacity="0.75"/>
+          <rect x="144" y="-20" width="14" height="40" rx="7" fill="#fff" opacity="0.5"/>
+          <rect x="168" y="-44" width="14" height="88" rx="7" fill="#fff" opacity="0.8"/>
+          <rect x="192" y="-16" width="14" height="32" rx="7" fill="#fff" opacity="0.45"/>
+          <rect x="216" y="-32" width="14" height="64" rx="7" fill="#fff" opacity="0.6"/>
+          <rect x="240" y="-10" width="14" height="20" rx="7" fill="#fff" opacity="0.4"/>
+        </g>
+  </g>
+  <!-- 左侧文字 -->
+  <g>
+    <text x="96" y="300" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="2">Suno v5</text>
+    <text x="100" y="372" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="34" font-weight="500" fill="#ffffff" opacity="0.85">AI 作曲</text>
+    <rect x="100" y="410" width="120" height="5" rx="2.5" fill="#ffffff" opacity="0.9"/>
+    <text x="100" y="470" font-family="Arial,sans-serif" font-size="22" font-weight="600" fill="#ffffff" opacity="0.6" letter-spacing="3">AI · TECH GUIDE</text>
+  </g>
+</svg>
