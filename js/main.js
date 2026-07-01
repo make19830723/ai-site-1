@@ -117,9 +117,12 @@
   }
 
   /* ---------- 数字滚动 ---------- */
-  function animateStats() {
-    var stats = document.querySelectorAll("[data-count]");
+  function animateStatsIn(scope) {
+    var root = scope || document;
+    var stats = root.querySelectorAll("[data-count]");
     stats.forEach(function (el) {
+      if (el.getAttribute("data-counted") === "1") return;
+      el.setAttribute("data-counted", "1");
       var target = parseInt(el.getAttribute("data-count"), 10);
       var suffix = el.getAttribute("data-suffix") || "";
       var duration = 1400;
@@ -136,6 +139,7 @@
       requestAnimationFrame(step);
     });
   }
+  function animateStats() { animateStatsIn(document); }
 
   /* ---------- 启动 ---------- */
   document.addEventListener("DOMContentLoaded", function () {
@@ -143,22 +147,46 @@
     applyLang(getLang());
     initContactForm();
 
-    // 数字动画: 进入视口时触发
+    // 数字动画: 进入视口时触发 (同时观察 Hero 统计区与 metrics 数据条)
     if (window.IntersectionObserver) {
-      var io = new IntersectionObserver(function (entries) {
+      var ioStats = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            animateStats();
-            io.disconnect();
+            animateStatsIn(entry.target);
+            ioStats.unobserve(entry.target);
           }
         });
       }, { threshold: 0.3 });
       var statsWrap = document.querySelector("[data-stats]");
-      if (statsWrap) io.observe(statsWrap);
+      if (statsWrap) ioStats.observe(statsWrap);
+      var metricsWrap = document.querySelector(".metrics-grid");
+      if (metricsWrap) ioStats.observe(metricsWrap);
     } else {
       animateStats();
     }
+
+    // 滚动进入动画: 给 .reveal 元素在进入视口时添加 .is-visible
+    initReveal();
   });
+
+  function initReveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    if (!reveals.length) return;
+    // 不支持 IO: 直接全部显示
+    if (!window.IntersectionObserver) {
+      reveals.forEach(function (el) { el.classList.add("is-visible"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+  }
 
   // 暴露给文章详情页使用
   window.__i18n = { getLang: getLang, setLang: setLang, applyLang: applyLang };

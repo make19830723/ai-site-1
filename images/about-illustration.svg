@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" preserveAspectRatio="xMidYMid slice" role="img" aria-label="AI 咨询团队协作与数据洞察">
+  <defs>
+    <linearGradient id="ab-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaf1ff"/>
+      <stop offset="1" stop-color="#f4f7fc"/>
+    </linearGradient>
+    <linearGradient id="ab-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fbfcfe"/>
+    </linearGradient>
+    <linearGradient id="ab-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6df6"/>
+      <stop offset="1" stop-color="#6aa1ff"/>
+    </linearGradient>
+    <linearGradient id="ab-deep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d52d6"/>
+      <stop offset="1" stop-color="#2f6df6"/>
+    </linearGradient>
+    <linearGradient id="ab-bar1" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#bcd3ff"/>
+      <stop offset="1" stop-color="#6aa1ff"/>
+    </linearGradient>
+    <linearGradient id="ab-bar2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#9cbcff"/>
+      <stop offset="1" stop-color="#2f6df6"/>
+    </linearGradient>
+    <linearGradient id="ab-bar3" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#5e96ff"/>
+      <stop offset="1" stop-color="#1d52d6"/>
+    </linearGradient>
+    <filter id="ab-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dy="8" result="off"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="640" height="520" fill="url(#ab-bg)"/>
+
+  <!-- 装饰光斑 -->
+  <circle cx="560" cy="80" r="120" fill="#2f6df6" opacity="0.06"/>
+  <circle cx="70" cy="460" r="100" fill="#6aa1ff" opacity="0.07"/>
+
+  <!-- 主卡片：数据看板 -->
+  <g filter="url(#ab-shadow)">
+    <rect x="70" y="70" width="360" height="260" rx="18" fill="url(#ab-card)" stroke="#e6e9ef"/>
+    <!-- 看板顶栏 -->
+    <rect x="70" y="70" width="360" height="46" rx="18" fill="#f7f8fa"/>
+    <rect x="70" y="98" width="360" height="18" fill="#f7f8fa"/>
+    <circle cx="92" cy="93" r="5" fill="#2f6df6"/>
+    <circle cx="110" cy="93" r="5" fill="#bcd3ff"/>
+    <circle cx="128" cy="93" r="5" fill="#e6e9ef"/>
+    <rect x="92" y="120" width="120" height="10" rx="5" fill="#1a2233"/>
+    <rect x="92" y="138" width="80" height="8" rx="4" fill="#cfd6e2"/>
+
+    <!-- 增长指标 -->
+    <g transform="translate(92,170)">
+      <text x="0" y="22" font-family="Segoe UI,Arial" font-size="30" font-weight="800" fill="#0d1b2a">+148%</text>
+      <rect x="0" y="34" width="70" height="22" rx="11" fill="#eaf1ff"/>
+      <text x="35" y="49" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" font-weight="700" fill="#2f6df6">同比 ↑</text>
+    </g>
+
+    <!-- 柱状图 -->
+    <g transform="translate(92,232)">
+      <rect x="0"   y="40" width="34" height="48"  rx="6" fill="url(#ab-bar1)"/>
+      <rect x="48"  y="22" width="34" height="66"  rx="6" fill="url(#ab-bar1)"/>
+      <rect x="96"  y="8"  width="34" height="80"  rx="6" fill="url(#ab-bar2)"/>
+      <rect x="144" y="-6" width="34" height="94"  rx="6" fill="url(#ab-bar3)"/>
+      <rect x="192" y="-20" width="34" height="108" rx="6" fill="url(#ab-bar3)"/>
+      <line x1="-4" y1="90" x2="244" y2="90" stroke="#e6e9ef" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- 右上浮动卡片：节点网络 -->
+  <g filter="url(#ab-shadow)" transform="translate(395,40)">
+    <rect x="0" y="0" width="180" height="130" rx="16" fill="url(#ab-card)" stroke="#e6e9ef"/>
+    <text x="18" y="32" font-family="Segoe UI,Arial" font-size="12" font-weight="700" fill="#5b6577">AI 工作流</text>
+    <!-- 节点 -->
+    <line x1="50" y1="70" x2="90" y2="55" stroke="#bcd3ff" stroke-width="2"/>
+    <line x1="50" y1="70" x2="90" y2="95" stroke="#bcd3ff" stroke-width="2"/>
+    <line x1="90" y1="55" x2="140" y2="75" stroke="#9cbcff" stroke-width="2"/>
+    <line x1="90" y1="95" x2="140" y2="75" stroke="#9cbcff" stroke-width="2"/>
+    <circle cx="50" cy="70" r="10" fill="url(#ab-blue)"/>
+    <circle cx="90" cy="55" r="8" fill="#6aa1ff"/>
+    <circle cx="90" cy="95" r="8" fill="#6aa1ff"/>
+    <circle cx="140" cy="75" r="11" fill="url(#ab-deep)"/>
+    <circle cx="140" cy="75" r="5" fill="#fff"/>
+  </g>
+
+  <!-- 右下浮动卡片：对话/咨询 -->
+  <g filter="url(#ab-shadow)" transform="translate(380,300)">
+    <rect x="0" y="0" width="200" height="150" rx="16" fill="url(#ab-deep)"/>
+    <text x="20" y="32" font-family="Segoe UI,Arial" font-size="12" font-weight="700" fill="rgba(255,255,255,0.7)">深度咨询</text>
+    <!-- 气泡 -->
+    <rect x="20" y="46" width="110" height="22" rx="11" fill="rgba(255,255,255,0.14)"/>
+    <rect x="20" y="74" width="80" height="22" rx="11" fill="rgba(255,255,255,0.14)"/>
+    <rect x="70" y="102" width="110" height="22" rx="11" fill="#fff"/>
+    <text x="125" y="117" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" font-weight="700" fill="#2f6df6">方案已就绪 ✓</text>
+  </g>
+
+  <!-- 左下浮动小卡片 -->
+  <g filter="url(#ab-shadow)" transform="translate(50,360)">
+    <rect x="0" y="0" width="150" height="92" rx="14" fill="url(#ab-card)" stroke="#e6e9ef"/>
+    <circle cx="30" cy="30" r="14" fill="#eaf1ff"/>
+    <path d="M24 30 l4 5 l8 -9" fill="none" stroke="#2f6df6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="14" y="56" width="80" height="8" rx="4" fill="#1a2233"/>
+    <rect x="14" y="70" width="56" height="7" rx="3.5" fill="#cfd6e2"/>
+  </g>
+</svg>

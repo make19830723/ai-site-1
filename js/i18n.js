@@ -20,6 +20,10 @@ window.I18N = {
     "hero.subtitle": "我们分享前沿的人工智能落地经验，帮助企业将 AI 真正转化为生产力。",
     "hero.cta1": "浏览文章",
     "hero.cta2": "预约咨询",
+    "hero.trust1": "100+ 实战案例",
+    "hero.trust2": "中英双语",
+    "hero.trust3": "持续更新",
+    "hero.float": "实战教程持续更新中",
 
     // 统计
     "stat.articles": "实战文章",
@@ -27,6 +31,7 @@ window.I18N = {
     "stat.langs": "双语对照",
 
     // 服务
+    "services.eyebrow": "服务能力",
     "services.title": "我们提供什么",
     "services.subtitle": "围绕 AI 落地全链路，提供从战略到执行的咨询支持。",
     "services.s1.title": "AI 战略咨询",
@@ -37,6 +42,7 @@ window.I18N = {
     "services.s3.desc": "体系化的 AI 培训，让团队具备持续创新能力。",
 
     // 文章
+    "articles.eyebrow": "知识库",
     "articles.title": "最新文章",
     "articles.subtitle": "持续分享 AI 行业的实战洞见与方法论。",
     "articles.readmore": "阅读全文 →",
@@ -44,8 +50,15 @@ window.I18N = {
     "articles.total": "共",
     "articles.unit": "篇文章",
 
+    // 数据条
+    "metrics.m1": "服务客户",
+    "metrics.m2": "客户复购率",
+    "metrics.m3": "平均效率提升",
+    "metrics.m4": "响应支持",
+
     // 关于
-    "about.title": "关于我们",
+    "about.eyebrow": "关于我们",
+    "about.title": "把 AI 变成可落地的业务能力",
     "about.p1": "我们是一支专注于人工智能落地应用的咨询团队，深耕行业多年，服务覆盖金融、零售、制造等领域。",
     "about.p2": "我们相信，AI 的价值不在于技术本身，而在于能否真正解决业务问题。每一篇文章、每一次咨询，都源于真实的实战经验。",
     "about.feature1": "实战导向",
@@ -54,6 +67,19 @@ window.I18N = {
     "about.feature2.desc": "从规划到落地持续支持",
     "about.feature3": "持续更新",
     "about.feature3.desc": "紧跟 AI 行业最新动态",
+
+    // 工作流程
+    "steps.eyebrow": "协作方式",
+    "steps.title": "四步开启 AI 落地",
+    "steps.subtitle": "清晰透明的流程，确保每一步都产出可衡量的价值。",
+    "steps.s1.title": "需求诊断",
+    "steps.s1.desc": "梳理业务场景，识别高价值的 AI 切入点。",
+    "steps.s2.title": "方案设计",
+    "steps.s2.desc": "制定技术选型与落地路线，明确里程碑。",
+    "steps.s3.title": "落地实施",
+    "steps.s3.desc": "集成、部署、调优，确保系统稳定上线。",
+    "steps.s4.title": "持续优化",
+    "steps.s4.desc": "数据驱动迭代，让效果持续放大。",
 
     // 联系
     "contact.title": "开始你的 AI 之旅",
@@ -96,11 +122,16 @@ window.I18N = {
     "hero.subtitle": "We share hands-on experience in applied AI, helping enterprises turn AI into real productivity.",
     "hero.cta1": "Browse Articles",
     "hero.cta2": "Book a Consult",
+    "hero.trust1": "100+ Real Cases",
+    "hero.trust2": "Bilingual",
+    "hero.trust3": "Always Updated",
+    "hero.float": "Tutorials updated continuously",
 
     "stat.articles": "Practical Articles",
     "stat.categories": "Use Cases",
     "stat.langs": "Bilingual",
 
+    "services.eyebrow": "Capabilities",
     "services.title": "What We Offer",
     "services.subtitle": "End-to-end AI consulting, from strategy to execution.",
     "services.s1.title": "AI Strategy",
@@ -110,6 +141,7 @@ window.I18N = {
     "services.s3.title": "Team Enablement",
     "services.s3.desc": "Systematic AI training to build lasting innovation capability.",
 
+    "articles.eyebrow": "Knowledge Base",
     "articles.title": "Latest Articles",
     "articles.subtitle": "Practical insights and methodology from the AI industry.",
     "articles.readmore": "Read more →",
@@ -117,7 +149,13 @@ window.I18N = {
     "articles.total": "",
     "articles.unit": "articles",
 
-    "about.title": "About Us",
+    "metrics.m1": "Clients Served",
+    "metrics.m2": "Repeat Rate",
+    "metrics.m3": "Avg. Efficiency",
+    "metrics.m4": "Support",
+
+    "about.eyebrow": "About Us",
+    "about.title": "Turn AI Into Real Business Capability",
     "about.p1": "We are a consulting team focused on applied AI, with years of experience across finance, retail, and manufacturing.",
     "about.p2": "We believe the value of AI lies not in the technology itself, but in whether it truly solves business problems. Every article and consultation comes from real practice.",
     "about.feature1": "Practice-driven",
@@ -126,6 +164,18 @@ window.I18N = {
     "about.feature2.desc": "Continuous support from plan to launch",
     "about.feature3": "Always Updated",
     "about.feature3.desc": "Keeping pace with the latest in AI",
+
+    "steps.eyebrow": "How We Work",
+    "steps.title": "Launch AI in Four Steps",
+    "steps.subtitle": "A clear, transparent process where every step delivers measurable value.",
+    "steps.s1.title": "Diagnose",
+    "steps.s1.desc": "Map business scenarios and find high-value AI entry points.",
+    "steps.s2.title": "Design",
+    "steps.s2.desc": "Choose the tech stack and roadmap with clear milestones.",
+    "steps.s3.title": "Implement",
+    "steps.s3.desc": "Integrate, deploy, and tune for a stable launch.",
+    "steps.s4.title": "Optimize",
+    "steps.s4.desc": "Iterate with data to amplify results over time.",
 
     "contact.title": "Start Your AI Journey",
     "contact.subtitle": "Leave your needs and we'll reach out within 24 hours.",
