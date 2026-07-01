@@ -100,6 +100,9 @@ window.I18N = {
     "footer.copyright": "© 2026 AI 咨询. 保留所有权利.",
     "footer.icp": "",
 
+    // 广告
+    "ad.label": "广告",
+
     // 文章页通用
     "article.back": "← 返回文章列表",
     "article.updated": "更新于",
@@ -193,6 +196,9 @@ window.I18N = {
     "footer.follow": "Follow Us",
     "footer.copyright": "© 2026 AI Consulting. All rights reserved.",
     "footer.icp": "",
+
+    // 广告
+    "ad.label": "Advertisement",
 
     "article.back": "← Back to articles",
     "article.updated": "Updated",

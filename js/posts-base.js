@@ -187,6 +187,9 @@
 
     // ---- 相关文章 (同分类, 排除当前) ----
     renderRelated(lang, p);
+
+    // ---- 文章正文/底部广告 ----
+    injectArticleAds();
   }
 
   function renderTagList(kw, lang) {
@@ -223,6 +226,46 @@
     mount.innerHTML = '<div class="container article-wrap"><div class="not-found">' +
       "<h1>404</h1><p>" + (lang === "zh" ? "文章不存在或尚未发布。" : "Article not found or not yet published.") +
       '</p><a class="btn btn-primary" href="../articles.html">' + dict(lang, "article.back") + "</a></div></div>";
+  }
+
+  /* ---------- 文章正文内联广告 (正文中段) ---------- */
+  function adUnitHTML(slot) {
+    return '<div class="ad-wrap ad-inline">' +
+      '<div class="ad-label">' + (getLang() === "zh" ? "广告" : "Advertisement") + '</div>' +
+      '<div class="ad-box"><ins class="adsbygoogle" style="display:block" ' +
+      'data-ad-client="ca-pub-7420136917623230" data-ad-slot="' + slot + '" ' +
+      'data-ad-format="auto" data-full-width-responsive="true"></ins></div>' +
+      '</div>';
+  }
+
+  /* ---------- 文章底部广告 (正文结束 / 相关文章之前) ---------- */
+  function injectArticleAds() {
+    if (!window.__ads) return;
+    var inline = document.querySelector(".article-body .ad-inline");
+    if (!inline) {
+      var body = document.querySelector(".article-body");
+      if (body) {
+        // 找到正文中部一个 H2, 把广告插在它前面 (内容站最佳位置)
+        var h2s = body.querySelectorAll("h2");
+        var target = null;
+        if (h2s.length >= 2) target = h2s[Math.min(1, h2s.length - 1)];
+        if (target) {
+          var div = document.createElement("div");
+          div.innerHTML = adUnitHTML("4444444444");
+          target.parentNode.insertBefore(div.firstChild, target);
+          window.__ads.push();
+        }
+      }
+    }
+    // 文章底部 (正文之后, 相关文章之前)
+    var body2 = document.querySelector(".article-body");
+    var related = document.querySelector("[data-related]");
+    if (body2 && related && !related.previousElementSibling.classList.contains("ad-wrap")) {
+      var foot = document.createElement("div");
+      foot.innerHTML = adUnitHTML("5555555555");
+      related.parentNode.insertBefore(foot.firstChild, related);
+      window.__ads.push();
+    }
   }
 
   /* ---------- meta 操作工具 ---------- */
