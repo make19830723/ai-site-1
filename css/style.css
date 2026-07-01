@@ -386,27 +386,6 @@ p { margin: 0; }
   .reveal.is-visible { opacity: 1; transform: none; }
 }
 
-/* ---------- 广告位 ---------- */
-.ad-slot {
-  margin: 0 auto;
-  max-width: 920px;
-  display: block;
-  overflow: hidden;
-}
-.ad-slot ins.adsbygoogle { display: block; width: 100%; }
-.ad-wrap {
-  max-width: 920px; margin: 40px auto; padding: 0 24px;
-}
-.ad-label {
-  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--c-text-mute); margin-bottom: 8px; text-align: center;
-}
-.ad-box {
-  background: var(--c-bg-soft); border: 1px dashed var(--c-border);
-  border-radius: var(--radius); padding: 24px; min-height: 120px;
-}
-.article-body + .ad-wrap { margin-top: 8px; }
-
 /* ============================================================
    文章系统: 筛选条 / 计数 / 详情页 / 相关文章 / 404
    ============================================================ */
