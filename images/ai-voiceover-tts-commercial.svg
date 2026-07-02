@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="AI 配音 TTS 商用">
+  <defs>
+    <linearGradient id="g_ai_voiceover_tts_commercial" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4c0519"/>
+      <stop offset="1" stop-color="#e11d48"/>
+    </linearGradient>
+    <radialGradient id="r_g_ai_voiceover_tts_commercial" cx="0.8" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g_ai_voiceover_tts_commercial)"/>
+  <rect width="1280" height="720" fill="url(#r_g_ai_voiceover_tts_commercial)"/>
+  <g fill="#ffffff" opacity="0.08">
+    <circle cx="760" cy="460" r="3"/>
+    <circle cx="816" cy="460" r="3"/>
+    <circle cx="872" cy="460" r="3"/>
+    <circle cx="928" cy="460" r="3"/>
+    <circle cx="984" cy="460" r="3"/>
+    <circle cx="1040" cy="460" r="3"/>
+    <circle cx="1096" cy="460" r="3"/>
+    <circle cx="1152" cy="460" r="3"/>
+    <circle cx="1208" cy="460" r="3"/>
+    <circle cx="760" cy="504" r="3"/>
+    <circle cx="816" cy="504" r="3"/>
+    <circle cx="872" cy="504" r="3"/>
+    <circle cx="928" cy="504" r="3"/>
+    <circle cx="984" cy="504" r="3"/>
+    <circle cx="1040" cy="504" r="3"/>
+    <circle cx="1096" cy="504" r="3"/>
+    <circle cx="1152" cy="504" r="3"/>
+    <circle cx="1208" cy="504" r="3"/>
+    <circle cx="760" cy="548" r="3"/>
+    <circle cx="816" cy="548" r="3"/>
+    <circle cx="872" cy="548" r="3"/>
+    <circle cx="928" cy="548" r="3"/>
+    <circle cx="984" cy="548" r="3"/>
+    <circle cx="1040" cy="548" r="3"/>
+    <circle cx="1096" cy="548" r="3"/>
+    <circle cx="1152" cy="548" r="3"/>
+    <circle cx="1208" cy="548" r="3"/>
+    <circle cx="760" cy="592" r="3"/>
+    <circle cx="816" cy="592" r="3"/>
+    <circle cx="872" cy="592" r="3"/>
+    <circle cx="928" cy="592" r="3"/>
+    <circle cx="984" cy="592" r="3"/>
+    <circle cx="1040" cy="592" r="3"/>
+    <circle cx="1096" cy="592" r="3"/>
+    <circle cx="1152" cy="592" r="3"/>
+    <circle cx="1208" cy="592" r="3"/>
+    <circle cx="760" cy="636" r="3"/>
+    <circle cx="816" cy="636" r="3"/>
+    <circle cx="872" cy="636" r="3"/>
+    <circle cx="928" cy="636" r="3"/>
+    <circle cx="984" cy="636" r="3"/>
+    <circle cx="1040" cy="636" r="3"/>
+    <circle cx="1096" cy="636" r="3"/>
+    <circle cx="1152" cy="636" r="3"/>
+    <circle cx="1208" cy="636" r="3"/>
+  </g>
+  <g transform="translate(900,360)">
+    <g transform="translate(-50,-80)"><rect x="30" y="0" width="40" height="90" rx="20" fill="#fff" opacity="0.95"/><rect x="40" y="18" width="20" height="8" rx="4" fill="#e11d48"/><rect x="40" y="34" width="20" height="8" rx="4" fill="#e11d48" opacity="0.6"/><rect x="40" y="50" width="20" height="8" rx="4" fill="#e11d48" opacity="0.4"/><path d="M10 70 Q50 120 90 70" fill="none" stroke="#fff" stroke-width="6"/><line x1="50" y1="110" x2="50" y2="140" stroke="#fff" stroke-width="6"/><line x1="30" y1="140" x2="70" y2="140" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g>
+  </g>
+  <g>
+    <text x="96" y="300" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="2">AI 配音</text>
+    <text x="100" y="372" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="34" font-weight="500" fill="#ffffff" opacity="0.85">TTS 商用</text>
+    <rect x="100" y="410" width="120" height="5" rx="2.5" fill="#ffffff" opacity="0.9"/>
+    <text x="100" y="470" font-family="Arial,sans-serif" font-size="22" font-weight="600" fill="#ffffff" opacity="0.6" letter-spacing="3">AI · TECH GUIDE</text>
+  </g>
+</svg>

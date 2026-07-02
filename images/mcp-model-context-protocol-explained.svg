@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="MCP 协议连接">
+  <defs>
+    <linearGradient id="g_mcp_model_context_protocol_explained" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c2d12"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="r_g_mcp_model_context_protocol_explained" cx="0.8" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g_mcp_model_context_protocol_explained)"/>
+  <rect width="1280" height="720" fill="url(#r_g_mcp_model_context_protocol_explained)"/>
+  <g fill="#ffffff" opacity="0.08">
+    <circle cx="760" cy="460" r="3"/>
+    <circle cx="816" cy="460" r="3"/>
+    <circle cx="872" cy="460" r="3"/>
+    <circle cx="928" cy="460" r="3"/>
+    <circle cx="984" cy="460" r="3"/>
+    <circle cx="1040" cy="460" r="3"/>
+    <circle cx="1096" cy="460" r="3"/>
+    <circle cx="1152" cy="460" r="3"/>
+    <circle cx="1208" cy="460" r="3"/>
+    <circle cx="760" cy="504" r="3"/>
+    <circle cx="816" cy="504" r="3"/>
+    <circle cx="872" cy="504" r="3"/>
+    <circle cx="928" cy="504" r="3"/>
+    <circle cx="984" cy="504" r="3"/>
+    <circle cx="1040" cy="504" r="3"/>
+    <circle cx="1096" cy="504" r="3"/>
+    <circle cx="1152" cy="504" r="3"/>
+    <circle cx="1208" cy="504" r="3"/>
+    <circle cx="760" cy="548" r="3"/>
+    <circle cx="816" cy="548" r="3"/>
+    <circle cx="872" cy="548" r="3"/>
+    <circle cx="928" cy="548" r="3"/>
+    <circle cx="984" cy="548" r="3"/>
+    <circle cx="1040" cy="548" r="3"/>
+    <circle cx="1096" cy="548" r="3"/>
+    <circle cx="1152" cy="548" r="3"/>
+    <circle cx="1208" cy="548" r="3"/>
+    <circle cx="760" cy="592" r="3"/>
+    <circle cx="816" cy="592" r="3"/>
+    <circle cx="872" cy="592" r="3"/>
+    <circle cx="928" cy="592" r="3"/>
+    <circle cx="984" cy="592" r="3"/>
+    <circle cx="1040" cy="592" r="3"/>
+    <circle cx="1096" cy="592" r="3"/>
+    <circle cx="1152" cy="592" r="3"/>
+    <circle cx="1208" cy="592" r="3"/>
+    <circle cx="760" cy="636" r="3"/>
+    <circle cx="816" cy="636" r="3"/>
+    <circle cx="872" cy="636" r="3"/>
+    <circle cx="928" cy="636" r="3"/>
+    <circle cx="984" cy="636" r="3"/>
+    <circle cx="1040" cy="636" r="3"/>
+    <circle cx="1096" cy="636" r="3"/>
+    <circle cx="1152" cy="636" r="3"/>
+    <circle cx="1208" cy="636" r="3"/>
+  </g>
+  <g transform="translate(900,360)">
+    <g transform="translate(-130,-50)"><rect x="0" y="14" width="80" height="44" rx="10" fill="#fff" opacity="0.92"/><rect x="110" y="14" width="80" height="44" rx="10" fill="#fff" opacity="0.7"/><rect x="220" y="14" width="80" height="44" rx="10" fill="#fff" opacity="0.92"/><rect x="55" y="-30" width="80" height="44" rx="10" fill="#ea580c" opacity="0.7"/><rect x="165" y="-30" width="80" height="44" rx="10" fill="#ea580c" opacity="0.9"/><line x1="80" y1="36" x2="110" y2="36" stroke="#fff" stroke-width="4"/><line x1="190" y1="36" x2="220" y2="36" stroke="#fff" stroke-width="4"/><line x1="95" y1="-8" x2="95" y2="14" stroke="#fff" stroke-width="4"/><line x1="205" y1="-8" x2="205" y2="14" stroke="#fff" stroke-width="4"/><line x1="135" y1="-8" x2="165" y2="-8" stroke="#fff" stroke-width="4"/></g>
+  </g>
+  <g>
+    <text x="96" y="300" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="96" font-weight="800" fill="#ffffff" letter-spacing="2">MCP</text>
+    <text x="100" y="372" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="34" font-weight="500" fill="#ffffff" opacity="0.85">协议连接</text>
+    <rect x="100" y="410" width="120" height="5" rx="2.5" fill="#ffffff" opacity="0.9"/>
+    <text x="100" y="470" font-family="Arial,sans-serif" font-size="22" font-weight="600" fill="#ffffff" opacity="0.6" letter-spacing="3">AI · TECH GUIDE</text>
+  </g>
+</svg>

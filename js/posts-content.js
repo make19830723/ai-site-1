@@ -11766,5 +11766,1011 @@ window.POST_CONTENT = {
 <p>Recurring queries (common user questions) get semantic caching—similar questions return historical answers without a model call.</p>`
   },
 
-  /* ===== end of 20 new tech articles ===== */
+  /* ===== batch-3 appended below ===== */
+  /* ===== deepseek-r1-reasoning-model-guide ===== */
+  "deepseek-r1-reasoning-model-guide": {
+    zh: `<h2>开源界第一次摸到了 o1 的门槛</h2>
+<p>DeepSeek-R1 出来那天，我熬到凌晨两点跑测试。<strong>结论很直接：它是目前开源模型里推理能力最接近 OpenAI o1 的一个，而且完全免费可自部署。</strong>对预算敏感的团队，这是个分水岭。</p>
+
+<h2>它是怎么变聪明的</h2>
+<p>R1 的训练方式很特别——大量用强化学习，让模型自己"想"出解题过程，而不是单纯模仿人类答案。所以它会在回答前先输出一段 <strong>&lt;think&gt; 推理链</strong>，把思路写出来再给结论。这种"先想后说"的方式，正是它处理难题的关键。</p>
+
+<h2>实测三组难题</h2>
+<p><strong>数学</strong>：我给了三道竞赛题，R1 答对两道，过程完整。o1 三道全对，但 R1 的表现已经远超普通模型。<strong>代码</strong>：让它写一个带并发的爬虫，结构清晰，能跑。<strong>逻辑谜题</strong>：那道经典的"狼羊菜过河"，它一次性给出正确步骤，还解释了为什么。普通模型经常在这题上绕晕。</p>
+
+<h2>什么时候该用 R1</h2>
+<ul>
+<li><strong>需要深度推理</strong>：数学证明、算法设计、复杂逻辑——R1 的主场。</li>
+<li><strong>想本地部署</strong>：数据敏感、不想走 API 的团队，R1 + Ollama 是黄金组合。</li>
+<li><strong>预算有限</strong>：免费，效果逼近付费的 o1。</li>
+</ul>
+
+<h2>什么时候别用 R1</h2>
+<p>R1 的<strong>响应慢</strong>——因为它要先"想"一长串。简单问答、闲聊、改个错别字，用它纯属浪费。日常对话留给普通模型，难题再请 R1 出场。<strong>它的思考链会消耗大量 token，调用 API 时成本不低。</strong></p>
+
+<h2>一个实在的建议</h2>
+<p>R1 不是万能的，但它把"开源模型能不能做复杂推理"这个问题给出了肯定回答。如果你做过被 o1 的高价劝退、又确实需要推理能力的项目，认真试一下 R1。</p>`,
+    en: `<h2>Open-Source Finally Reaches the o1 Threshold</h2>
+<p>I stayed up testing DeepSeek-R1 the night it dropped. Verdict: the open-source model closest to OpenAI o1 in reasoning—and fully free to self-host. A watershed for budget-conscious teams.</p>
+
+<h2>How It Got Smart</h2>
+<p>R1 trains heavily with reinforcement learning—the model learns to "think" rather than imitate answers. It emits a &lt;think&gt; reasoning chain before its conclusion. Thinking first is the key to hard problems.</p>
+
+<h2>Three Hard Tests</h2>
+<p><strong>Math</strong>: three olympiad problems, R1 got two right with full working. o1 got three, but R1 far outpaces regular models. <strong>Code</strong>: a concurrent crawler—clean and runnable. <strong>Logic</strong>: the wolf-goat-cabbage puzzle solved in one shot, with explanation.</p>
+
+<h2>When to Use R1</h2>
+<ul>
+<li><strong>Deep reasoning</strong>: proofs, algorithm design, complex logic—its home turf.</li>
+<li><strong>Self-hosting</strong>: sensitive data, no API—R1 + Ollama is golden.</li>
+<li><strong>Budget-constrained</strong>: free, near-paid-o1 quality.</li>
+</ul>
+
+<h2>When Not to Use R1</h2>
+<p>R1 is slow—it "thinks" at length. For simple Q&A, chat, or typo fixes, it's wasteful. Save it for hard problems. Its thinking chain burns tokens, so API costs add up.</p>`
+  },
+
+  /* ===== llama-4-meta-open-model ===== */
+  "llama-4-meta-open-model": {
+    zh: `<h2>开源旗舰，够不够打闭源</h2>
+<p>Meta 发布 Llama 4 时喊出了"最强开源模型"，我把它的几个尺寸版本都跑了一遍。<strong>坦诚说：它很强，但"打过闭源"这话要分场景。</strong></p>
+
+<h2>中文表现：进步大，仍有差距</h2>
+<p>Llama 4 的中文比前几代自然多了，短文、对话都流畅。但写长篇中文时，偶尔还会冒出翻译腔，措辞不如国产模型（Qwen、DeepSeek）地道。<strong>纯中文场景，国产开源反而更香。</strong></p>
+
+<h2>代码能力：开源第一梯队</h2>
+<p>我让它写了 React 组件、Python 数据处理、SQL 查询，质量都属第一梯队。和 GPT-4 比有差距，但在开源里属顶尖。自部署做代码助手，Llama 4 完全够用。</p>
+
+<h2>视觉理解：原生多模态是真本事</h2>
+<p>Llama 4 原生支持图像输入。我传了产品截图让它分析、传了图表让它解读，都做得不错。这打破了"开源模型只能处理文字"的刻板印象。<strong>对需要图文理解的应用，Llama 4 是开源里少有的选择。</strong></p>
+
+<h2>超长上下文：能塞但别全塞</h2>
+<p>支持很长的上下文窗口，能塞进大量文档。但实测发现，<strong>塞得越满，对中段内容的注意力会下降</strong>（所谓"lost in the middle"）。关键信息尽量放开头和结尾。</p>
+
+<h2>自部署的现实考量</h2>
+<ul>
+<li><strong>硬件</strong>：大尺寸版本需要多卡，普通团队跑不动。</li>
+<li><strong>量化</strong>：用 4-bit 量化能大幅降显存，效果损失很小。</li>
+<li><strong>微调</strong>：你的领域数据微调一下，能超越通用闭源模型。</li>
+</ul>
+
+<h2>我的选型结论</h2>
+<p>要数据私有、要长期免费、有自己的算力——Llama 4 是首选。追求极致效果、不在意成本——闭源旗舰仍领先。两者会长期共存，按场景选。</p>`,
+    en: `<h2>Open Flagship—Enough to Beat Closed?</h2>
+<p>Meta called Llama 4 its strongest open model. I ran the size variants. Honestly: very strong, but "beats closed" depends on the scenario.</p>
+
+<h2>Chinese: Big Leaps, Still a Gap</h2>
+<p>Llama 4's Chinese is far more natural than predecessors. But long-form occasionally shows translation tone; domestic models (Qwen, DeepSeek) are more idiomatic. For pure Chinese, Chinese open models win.</p>
+
+<h2>Code: Top of Open-Source</h2>
+<p>React, Python, SQL—all top-tier. Behind GPT-4 but the best in open-source. For self-hosted code assistants, Llama 4 suffices.</p>
+
+<h2>Vision: Native Multimodal Is Real</h2>
+<p>Llama 4 natively takes images. I fed product screenshots and charts—decent analysis. This breaks the "open models do text only" stereotype.</p>
+
+<h2>Long Context: Stuffers Beware</h2>
+<p>Long context windows fit plenty, but attention to mid-content drops ("lost in the middle"). Put key info at the start and end.</p>
+
+<h2>Self-Hosting Realities</h2>
+<ul>
+<li><strong>Hardware</strong>: large variants need multiple GPUs.</li>
+<li><strong>Quantization</strong>: 4-bit cuts VRAM with minimal quality loss.</li>
+<li><strong>Fine-tuning</strong>: domain data can beat general closed models.</li>
+</ul>`
+  },
+
+  /* ===== gpt-4o-image-generation-native ===== */
+  "gpt-4o-image-generation-native": {
+    zh: `<h2>这不是 DALL·E，是 GPT-4o 自己画的</h2>
+<p>很多人没注意到，GPT-4o 现在能<strong>直接生成图像</strong>，不是调 DALL·E 那种外部模型。区别巨大：它的图能精确渲染文字、延续同一风格、严格遵循复杂指令。<strong>做营销物料，这是质变。</strong></p>
+
+<h2>文字渲染：终于不乱码了</h2>
+<p>我让它做一张"夏季大促 全场 5 折"的海报，中英文都清晰，字号、排版合理。这在 DALL·E 时代几乎不可能。<strong>对需要带文字的图（海报、信息图、教程截图），GPT-4o 是目前最稳的。</strong></p>
+
+<h2>风格延续：多张图一个调性</h2>
+<p>我让它在同一对话里生成 5 张"极简扁平风、主色蓝"的配图，5 张高度一致。这种"系列图"能力，对品牌内容生产是刚需。DALL·E 经常一张一个样。</p>
+
+<h2>指令遵循：要什么给什么</h2>
+<p>我给了一段超复杂的指令："三格漫画，左格画一个人在加班，中格画他崩溃，右格画他用 AI 后轻松，每格顶部加一句旁白"。GPT-4o 基本照做，连旁白位置都对。<strong>这种复杂结构化出图，是它的强项。</strong></p>
+
+<h2>三个实测场景</h2>
+<ul>
+<li><strong>营销海报</strong>：标题、副标题、CTA、配图一次出，可用率 70%+。</li>
+<li><strong>信息图</strong>：把数据可视化的指令给它，图表 + 文字标注都齐。</li>
+<li><strong>多格漫画/教程</strong>：分镜、对话气泡、顺序，结构清晰。</li>
+</ul>
+
+<h2>它的短板</h2>
+<p>写实人像仍不如 Midjourney 精致；超现实、艺术风格它也偏保守。<strong>把它定位成"营销物料和结构化图的专业户"，而不是"全能画师"。</strong>和 MJ 搭配用，覆盖绝大多数出图需求。</p>`,
+    en: `<h2>This Isn't DALL·E—It's GPT-4o Drawing Directly</h2>
+<p>GPT-4o now generates images natively, not via DALL·E. The difference is huge: precise text, consistent style, strict instruction-following. A qualitative shift for marketing assets.</p>
+
+<h2>Text Rendering: No More Gibberish</h2>
+<p>A "Summer Sale 50% Off" poster came out with crisp Chinese and English, sensible type. Nearly impossible in the DALL·E era. For text-bearing images, GPT-4o is the most stable today.</p>
+
+<h2>Style Continuity: Multiple Images, One Tone</h2>
+<p>Five "minimalist flat, blue" illustrations in one chat—all highly consistent. This series capability is essential for brand content; DALL·E varied shot to shot.</p>
+
+<h2>Instruction-Following: Ask, Receive</h2>
+<p>A complex three-panel comic with narration—GPT-4o largely delivered, caption placement included. Structured output is its strength.</p>
+
+<h2>Three Tested Scenarios</h2>
+<ul>
+<li><strong>Marketing posters</strong>: title, subtitle, CTA, art in one pass, 70%+ usable.</li>
+<li><strong>Infographics</strong>: data-viz instructions yield charts plus annotations.</li>
+<li><strong>Comics/tutorials</strong>: panels, speech bubbles, order—all structured.</li>
+</ul>
+
+<h2>Its Weak Spots</h2>
+<p>Realistic portraits still trail Midjourney; surreal and fine-art styles are conservative. Position it as a specialist for marketing and structured imagery, not an all-rounder.</p>`
+  },
+
+  /* ===== devin-ai-software-engineer-review ===== */
+  "devin-ai-software-engineer-review": {
+    zh: `<h2>"AI 软件工程师"这个名号，扛得住吗</h2>
+<p>Devin 是 Cognition 做的 AI，定位是"AI 软件工程师"——能给需求、自己写代码、跑测试、修 bug、提 PR。<strong>听起来像抢饭碗，实测下来它更像一个非常能干的新人。</strong></p>
+
+<h2>我交给它一个真实 issue</h2>
+<p>从一个开源项目挑了个中等难度的 bug。Devin 自己读代码、定位问题、写修复、跑测试、提交 PR。整个过程二十多分钟，PR 的描述写得比一些真人还规范。<strong>但代码我得仔细 review，它有一个边界情况没处理好。</strong></p>
+
+<h2>它擅长什么</h2>
+<ul>
+<li><strong>明确的、范围小的任务</strong>：修 bug、加小功能、写测试，效率很高。</li>
+<li><strong>有现成模式可循的活</strong>：CRUD、对接 API、表单逻辑。</li>
+<li><strong>自己跑测试闭环</strong>：写完自己验证，省去你来回调试。</li>
+</ul>
+
+<h2>它干不好什么</h2>
+<p>架构设计、跨系统重构、需要业务上下文判断的需求——这些它搞不定。<strong>它像应届生：执行力强，但缺经验和全局视野。</strong>让它做你"懒得做但能做"的活，而不是你想不清楚的活。</p>
+
+<h2>成本和工作流</h2>
+<p>Devin 按 ACU（agent 计算单元）计费，一个任务几美元到几十美元不等。贵不贵看对比：如果它替你省了半小时、你时薪 50 美元，就划算。<strong>建议先在低风险项目试，跑顺了再上核心业务。</strong></p>
+
+<h2>对工程师意味着什么</h2>
+<p>不必焦虑"被替代"。Devin 把工程师从重复劳动里解放出来，让你专注设计和 review。<strong>会用 AI 工程师的工程师，会比不用的人产出高一个量级。</strong>这才是趋势。</p>`,
+    en: `<h2>Does the "AI Software Engineer" Title Hold Up?</h2>
+<p>Devin by Cognition positions itself as an AI software engineer—takes requirements, codes, tests, fixes bugs, files PRs. In practice, it's more like a capable junior.</p>
+
+<h2>I Gave It a Real Issue</h2>
+<p>A medium-difficulty bug from an open-source project. Devin read the code, located the issue, wrote a fix, ran tests, and filed a PR in about 20 minutes—better described than some humans. But I had to review carefully; it missed an edge case.</p>
+
+<h2>What It's Good At</h2>
+<ul>
+<li><strong>Clear, scoped tasks</strong>: bug fixes, small features, tests—efficient.</li>
+<li><strong>Patterned work</strong>: CRUD, API integration, form logic.</li>
+<li><strong>Self-testing loops</strong>: writes and validates, saving back-and-forth.</li>
+</ul>
+
+<h2>What It Struggles With</h2>
+<p>Architecture, cross-system refactors, business-context judgment. It's a fresher: strong execution, lacking experience and big-picture vision.</p>
+
+<h2>Cost and Workflow</h2>
+<p>Devin bills per ACU—tasks range from a few to tens of dollars. Worth it if it saves you half an hour at a $50 hourly rate. Start with low-risk projects before core systems.</p>`
+  },
+
+  /* ===== replit-agent-cloud-coding-guide ===== */
+  "replit-agent-cloud-coding-guide": {
+    zh: `<h2>不会写代码，也能做出能用的应用</h2>
+<p>Replit Agent 是我推荐给非程序员最多的工具。<strong>它在浏览器里跑，你用一句话描述需求，它给你生成一个全栈应用，连数据库和上线部署都包了。</strong>对学生、产品经理、想验证想法的人，门槛低到离谱。</p>
+
+<h2>从想法到上线，只要几轮对话</h2>
+<p>我让它做一个"记录每日开支的小应用"。它先问了我几个问题（要不要登录、要不要分类），然后生成代码、建好数据库、配好页面。点一下 Deploy，就有一个能访问的网址了。<strong>整个过程没写一行代码。</strong></p>
+
+<h2>它的技术栈和局限</h2>
+<p>Replit Agent 默认用 Python/Node 全栈，自带 SQLite/Postgres。适合<strong>中小型应用</strong>：表单、数据 CRUD、简单看板。<strong>不适合</strong>高并发、复杂业务逻辑、企业级架构——那是专业开发的活。</p>
+
+<h2>怎么和它"对话"效果好</h2>
+<ul>
+<li><strong>先说清目标</strong>："做一个给小团队用的任务管理工具"。</li>
+<li><strong>分功能加</strong>：先做最小版本能跑，再一个一个加功能。</li>
+<li><strong>遇到 bug 直接说</strong>："登录后跳转错了"，它会自己修。</li>
+</ul>
+
+<h2>代码质量怎么样</h2>
+<p>能跑、结构清晰，但离生产级有距离。<strong>把它当"快速原型工具"，验证想法用；想做成正式产品，还是得工程师介入重构。</strong>但对 80% 的内部小工具，Replit Agent 的产出直接就够用。</p>
+
+<h2>谁该用</h2>
+<p>产品经理做 demo、创业者验证 MVP、学生做课设、运营做内部小工具。<strong>专业开发也能用——拿它快速搭脚手架，省去配置环境的麻烦。</strong>它是"想法到原型"之间最快的桥。</p>`,
+    en: `<h2>Build a Working App Without Writing Code</h2>
+<p>Replit Agent is the tool I recommend most to non-programmers. It runs in the browser—describe what you want, and it builds a full-stack app with database and deployment. The barrier is absurdly low.</p>
+
+<h2>Idea to Launch in a Few Turns</h2>
+<p>I asked for a daily expense tracker. It asked clarifying questions (login? categories?), then generated code, set up the database, and built pages. One click on Deploy and there was a live URL—without a single line of code.</p>
+
+<h2>Tech Stack and Limits</h2>
+<p>Python/Node full-stack with SQLite/Postgres. Good for small-to-mid apps: forms, CRUD, simple dashboards. Not for high concurrency, complex logic, or enterprise architecture.</p>
+
+<h2>How to Talk to It</h2>
+<ul>
+<li><strong>State the goal</strong>: "A task tool for small teams."</li>
+<li><strong>Add features incrementally</strong>: minimum viable first.</li>
+<li><strong>Report bugs directly</strong>: "Login redirect is wrong"—it self-fixes.</li>
+</ul>
+
+<h2>Code Quality</h2>
+<p>Runnable and clean, but not production-grade. Treat it as a rapid prototyping tool; for a real product, engineers should refactor. For 80% of internal tools, the output is enough.</p>`
+  },
+
+  /* ===== windsurf-editor-ai-ide-review ===== */
+  "windsurf-editor-ai-ide-review": {
+    zh: `<h2>Cascade 是什么，为什么有人觉得比 Cursor 好</h2>
+<p>Windsurf 是 Codeium 出的 AI IDE，最大的卖点是 <strong>Cascade</strong>——一种"流式协作"的交互方式。<strong>简单说，它让 AI 始终"看着"你在做什么，主动提供帮助，而不是等你召唤。</strong>这个体感差异，是它和 Cursor 最根本的不同。</p>
+
+<h2>Cascade 的工作方式</h2>
+<p>你在写代码时，Cascade 在侧边栏实时跟进。你写到一半，它会预判你下一步要做什么；你遇到报错，它直接弹出修复建议；你说一句"把这块重构一下"，它跨多文件改完还告诉你 diff。<strong>它像一个一直在你身后看屏幕的搭档。</strong></p>
+
+<h2>和 Cursor 的核心差异</h2>
+<ul>
+<li><strong>主动性</strong>：Windsurf 更主动，Cursor 更"问一句答一句"。</li>
+<li><strong>响应速度</strong>：Windsurf 的流式更顺滑，Cursor 的 Agent 更重。</li>
+<li><strong>生态</strong>：Cursor 的扩展和社区更成熟。</li>
+</ul>
+
+<h2>代码理解能力实测</h2>
+<p>我让两个 IDE 同时理解一个 50 文件的项目。Windsurf 的 Cascade 在跨文件追踪函数调用上更准确；Cursor 的 Composer 在大范围重构上更稳。<strong>各有擅长，不存在绝对碾压。</strong></p>
+
+<h2>谁适合 Windsurf</h2>
+<ul>
+<li><strong>喜欢"被动接收帮助"</strong>：不想频繁打字下指令的人。</li>
+<li><strong>新手和中级开发者</strong>：Cascade 的实时提示学习曲线更友好。</li>
+<li><strong>看重响应速度</strong>：它的流式体验确实更顺。</li>
+</ul>
+
+<h2>我的结论</h2>
+<p>Windsurf 不是 Cursor 的"替代品"，而是另一种哲学。<strong>建议两个都装，用一个礼拜看哪个顺手。</strong>AI IDE 还在快速进化，今天的差距下个月可能就变了，别急着站队。</p>`,
+    en: `<h2>What Is Cascade, and Why Do Some Prefer It Over Cursor?</h2>
+<p>Windsurf, Codeium's AI IDE, centers on Cascade—a "flow collaboration" interaction. AI always "watches" what you do and offers help proactively, rather than waiting to be summoned. This feel is the core difference from Cursor.</p>
+
+<h2>How Cascade Works</h2>
+<p>As you code, Cascade tracks in real time in the sidebar. It anticipates your next step, surfaces fix suggestions on errors, and refactors across files with a diff on request. It's like a partner watching your screen.</p>
+
+<h2>Core Differences vs Cursor</h2>
+<ul>
+<li><strong>Proactivity</strong>: Windsurf is more proactive; Cursor is more Q&A.</li>
+<li><strong>Speed</strong>: Windsurf's streaming is smoother; Cursor's agent is heavier.</li>
+<li><strong>Ecosystem</strong>: Cursor's extensions and community are more mature.</li>
+</ul>
+
+<h2>Code Understanding Tested</h2>
+<p>I had both IDEs understand a 50-file project. Cascade was more accurate on cross-file call tracing; Composer was steadier on large refactors. Each has its strengths—no absolute winner.</p>
+
+<h2>Who Fits Windsurf</h2>
+<ul>
+<li><strong>Passive help preferrers</strong>: those who dislike typing commands.</li>
+<li><strong>Juniors and mid-level devs</strong>: Cascade's real-time hints are friendlier.</li>
+<li><strong>Speed-sensitive</strong>: its streaming is genuinely smoother.</li>
+</ul>`
+  },
+
+  /* ===== ai-presentation-gamma-guide ===== */
+  "ai-presentation-gamma-guide": {
+    zh: `<h2>AI 做 PPT，从"能看"到"能用"了</h2>
+<p>去年 AI 做的 PPT 还像个草稿，今年已经能直接拿去汇报了。<strong>Gamma 是我目前用得最顺手的，它的核心优势是"理解你要表达什么"。</strong>不是堆模板，而是真的在帮你组织内容。</p>
+
+<h2>完整工作流演示</h2>
+<p>我把一份产品方案的文字稿丢给 Gamma，它先提炼出大纲（每页讲什么），让我确认后自动生成每一页：标题、要点、配图、图标。<strong>一份 15 页的汇报，从输入到成稿大概十分钟。</strong>剩下的就是细节调整。</p>
+
+<h2>为什么 Gamma 比 PPT 自带的 AI 强</h2>
+<ul>
+<li><strong>排版审美在线</strong>：它生成的版式现代、留白合理，不像老模板。</li>
+<li><strong>内容理解到位</strong>：能把你的文字结构化成"观点 + 论据"。</li>
+<li><strong>改起来快</strong>：说"这页换成深色"或"加一页竞品对比"，它直接改。</li>
+</ul>
+
+<h2>和其他工具的对比</h2>
+<p><strong>Tome</strong>：偏故事化、视觉冲击强，适合对外宣讲。<strong>美图 AI PPT</strong>：中文模板丰富，适合国内职场审美。<strong>Gamma</strong>：通用性最强，汇报、教学、产品介绍都行。<strong>选哪个看你场景，但 Gamma 是最稳的通用解。</strong></p>
+
+<h2>企业汇报的修改要点</h2>
+<ul>
+<li><strong>统一视觉</strong>：AI 默认配色可能不符品牌，手动换主色。</li>
+<li><strong>数据要核实</strong>：AI 会"编"看似合理的数据，必须人工核对。</li>
+<li><strong>加公司元素</strong>：logo、模板、术语，这些 AI 给不了。</li>
+</ul>
+
+<h2>一个清醒的认知</h2>
+<p>AI 做的是"60 分到 80 分"的活——把框架、内容、排版快速搭好。<strong>剩下的 20 分（说服力、洞察、细节打磨）还得你来。</strong>把它当强力助手，别指望它替你思考。</p>`,
+    en: `<h2>AI Decks Went From "Viewable" to "Usable"</h2>
+<p>Last year's AI decks felt like drafts; this year they're report-ready. Gamma is the smoothest I've used—its edge is "understanding what you want to say," not stacking templates.</p>
+
+<h2>Full Workflow Demo</h2>
+<p>I fed Gamma a product plan. It extracted an outline (one point per page), confirmed with me, then generated each page: title, bullets, art, icons. A 15-page report took about ten minutes; the rest is polish.</p>
+
+<h2>Why Gamma Beats Built-In AI</h2>
+<ul>
+<li><strong>Design taste</strong>: modern layouts, sensible whitespace.</li>
+<li><strong>Content grasp</strong>: structures your prose into argument + evidence.</li>
+<li><strong>Fast edits</strong>: "make this page dark" or "add a competitor page"—it does it.</li>
+</ul>
+
+<h2>Tool Comparison</h2>
+<p><strong>Tome</strong>: story-driven, visual punch, good for external pitches. <strong>Meitu AI PPT</strong>: rich Chinese templates, fits domestic office aesthetics. <strong>Gamma</strong>: most versatile—reports, teaching, product intros. The steadiest general solution.</p>
+
+<h2>Enterprise Edits</h2>
+<ul>
+<li><strong>Unify visuals</strong>: AI's default colors may not match brand.</li>
+<li><strong>Verify data</strong>: AI invents plausible numbers—must check.</li>
+<li><strong>Add company elements</strong>: logo, templates, terminology—AI can't.</li>
+</ul>`
+  },
+
+  /* ===== ai-mind-map-napkin-whimsical ===== */
+  "ai-mind-map-napkin-whimsical": {
+    zh: `<h2>把一段文字，变成一张能看的图</h2>
+<p>过去做思维导图、流程图，要在软件里拖拽半天。现在<strong>丢一段文字给 AI，它直接给你生成结构化的图</strong>。Napkin 和 Whimsical 是我测下来最强的两个，定位却很不一样。</p>
+
+<h2>Napkin：文字转图的高手</h2>
+<p>Napkin 的强项是<strong>把文字内容自动可视化</strong>。你贴一段"我们的产品有三个核心功能：A、B、C，各自的优势是……"，它自动生成一张层次清晰的信息图，配图、图标、配色都帮你做好。<strong>做内容配图、社媒卡片，它最快。</strong></p>
+
+<h2>Whimsical：团队协作的王者</h2>
+<p>Whimsical 的强项在<strong>协作和迭代</strong>。AI 帮你生成初版思维导图或流程图后，团队成员能实时一起改、加评论、做版本管理。<strong>做产品规划、头脑风暴，它的协作体验碾压一众工具。</strong></p>
+
+<h2>实测：同一个需求两个工具</h2>
+<p>我用"用户从看到广告到下单的完整流程"这段文字测了两个工具。<strong>Napkin</strong> 出图快、视觉精致，适合一次性产出。<strong>Whimsical</strong> 出图后方便继续讨论、修改、细化，适合团队协作场景。</p>
+
+<h2>怎么选</h2>
+<ul>
+<li><strong>做内容配图、社媒图</strong> → Napkin，又快又好看。</li>
+<li><strong>团队规划、流程梳理</strong> → Whimsical，协作无敌。</li>
+<li><strong>既要又要</strong> → Napkin 出初稿，导到 Whimsical 协作。</li>
+</ul>
+
+<h2>AI 思维可视化的真正价值</h2>
+<p>不是省了画图的时间，而是<strong>逼你想清楚结构</strong>。当 AI 把你的文字变成图，逻辑漏洞一目了然——少了一个分支、循环了、断层了。<strong>图是检验思考的镜子。</strong>这才是 AI 思维导图最深的价值。</p>`,
+    en: `<h2>Turn a Paragraph Into a Viewable Diagram</h2>
+<p>Mind maps and flowcharts used to mean hours of dragging. Now paste text to AI and get a structured diagram. Napkin and Whimsical are the two strongest I've tested—with different focuses.</p>
+
+<h2>Napkin: The Text-to-Visual Master</h2>
+<p>Napkin auto-visualizes text. Paste "three core features: A, B, C, with advantages..." and it generates a clean infographic with icons and color. Fastest for content images and social cards.</p>
+
+<h2>Whimsical: The Collaboration King</h2>
+<p>Whimsical excels at collaboration and iteration. AI generates a draft mind map or flowchart; the team edits live, comments, and versions. Its collaboration crushes competitors for product planning and brainstorms.</p>
+
+<h2>Same Prompt, Two Tools</h2>
+<p>I tested "the full flow from ad view to purchase." Napkin: fast, polished, one-shot output. Whimsical: easy to keep discussing and refining—better for teams.</p>
+
+<h2>How to Choose</h2>
+<ul>
+<li><strong>Content images, social cards</strong> → Napkin, fast and pretty.</li>
+<li><strong>Team planning, flow mapping</strong> → Whimsical, unbeatable collaboration.</li>
+<li><strong>Both</strong> → Napkin drafts, export to Whimsical for teamwork.</li>
+</ul>
+
+<h2>The Real Value of AI Visual Thinking</h2>
+<p>Not saving drawing time—but forcing you to clarify structure. When AI turns your prose into a diagram, logical gaps show: a missing branch, a loop, a break. The diagram is a mirror for your thinking.</p>`
+  },
+
+  /* ===== chatgpt-advanced-data-analysis ===== */
+  "chatgpt-advanced-data-analysis": {
+    zh: `<h2>不用学 Python，也能做数据分析</h2>
+<p>ChatGPT 的高级数据分析（原 Code Interpreter）可能是<strong>对非数据岗最友好的分析工具</strong>。上传一个 Excel，用大白话问问题，它写 Python、跑分析、画图表，全程你看不到代码。<strong>它让"会用 Excel"的人，做起了原本要数据分析师干的活。</strong></p>
+
+<h2>我用一个真实数据集测了</h2>
+<p>我上传了一份三个月的销售明细（几万行）。问它"哪款产品卖得最好、哪个地区增长最快、有没有异常"。它先清洗了数据（处理了空值、统一了日期格式），然后给出结论 + 三张图表。<strong>整个过程五分钟，结论和人工分析一致。</strong></p>
+
+<h2>它实际在做什么</h2>
+<ul>
+<li><strong>自动写 Python</strong>：用 pandas 处理数据，你看不到也不需要看。</li>
+<li><strong>跑统计和可视化</strong>：趋势图、饼图、相关性热力图都能画。</li>
+<li><strong>给文字结论</strong>：不只给图，还会用话总结"说明了什么"。</li>
+</ul>
+
+<h2>它的局限要认清</h2>
+<p><strong>数据量大时会慢</strong>：几十万行以上，处理起来卡。<strong>复杂业务逻辑它会猜</strong>：比如"什么算高价值客户"这种业务定义，它可能理解错。<strong>不能连接实时数据库</strong>：只能分析你上传的静态文件。</p>
+
+<h2>怎么问问题效果好</h2>
+<ul>
+<li><strong>先给背景</strong>：上传时说明"这是 X 产品的 Y 月销售数据"。</li>
+<li><strong>问具体不问宽泛</strong>："华东区 Q3 增长率"比"分析一下"好。</li>
+<li><strong>让它解释方法</strong>："你是怎么算的？"——能发现它的逻辑漏洞。</li>
+</ul>
+
+<h2>适合谁</h2>
+<p>运营、产品、市场、销售——所有"需要看数据但不会写代码"的岗位。<strong>专业数据分析师也别排斥，拿它做快速探索，省下的时间用来做深度洞察。</strong></p>`,
+    en: `<h2>Do Data Analysis Without Learning Python</h2>
+<p>ChatGPT's Advanced Data Analysis (formerly Code Interpreter) is the friendliest analysis tool for non-data roles. Upload an Excel, ask in plain language, and it writes Python, runs analysis, charts—all hidden. It lets "Excel-capable" people do what data analysts used to.</p>
+
+<h2>I Tested a Real Dataset</h2>
+<p>I uploaded three months of sales detail (tens of thousands of rows). Asked "best product, fastest-growing region, anomalies." It cleaned the data, then gave conclusions plus three charts in five minutes—matching manual analysis.</p>
+
+<h2>What It Actually Does</h2>
+<ul>
+<li><strong>Writes Python</strong>: pandas processing—hidden, no need to see.</li>
+<li><strong>Stats and viz</strong>: trends, pies, correlation heatmaps.</li>
+<li><strong>Text conclusions</strong>: not just charts—it summarizes "what it means."</li>
+</ul>
+
+<h2>Know Its Limits</h2>
+<p><strong>Slow on big data</strong>: hundreds of thousands of rows lag. <strong>Guesses complex business logic</strong>: definitions like "high-value customer" it may misjudge. <strong>No live database</strong>: analyzes only uploaded static files.</p>
+
+<h2>How to Ask Well</h2>
+<ul>
+<li><strong>Give context</strong>: "This is product X's sales for month Y."</li>
+<li><strong>Be specific</strong>: "East China Q3 growth" beats "analyze this."</li>
+<li><strong>Ask for methods</strong>: "How did you compute this?" reveals flaws.</li>
+</ul>`
+  },
+
+  /* ===== ai-virtual-tryon-ecommerce ===== */
+  "ai-virtual-tryon-ecommerce": {
+    zh: `<h2>不用拍照，AI 帮你把衣服穿上</h2>
+<p>AI 虚拟试衣这两年进步神速。<strong>用户上传一张照片，AI 就能把商品穿到身上；商家也能用 AI 模特替代昂贵的实拍。</strong>对电商，这是实打实的降本增效。</p>
+
+<h2>对消费者：试穿再也不用去店里</h2>
+<p>上传全身照，选商品，几秒钟出图。效果好的话，能看出衣服的版型、长度、配色适不适合自己。<strong>降低退货率，是它对消费者和商家最大的共同价值。</strong></p>
+
+<h2>对商家：AI 模特替代实拍</h2>
+<p>传统商品拍摄要请模特、租场地、打光、后期，一套图成本几千到几万。<strong>AI 模特让商家上传衣服平铺图，AI 自动穿到虚拟模特身上，还能换不同肤色、体型的模特。</strong>成本砍到原来的十分之一。</p>
+
+<h2>主流工具和它们擅长什么</h2>
+<ul>
+<li><strong>OOTDiffusion、LeapME</strong>：开源方案，技术团队可自部署。</li>
+<li><strong>阿里、京东的商用 API</strong>：商品一致性最好，国内电商首选。</li>
+<li><strong>Krea、Flux 配合 ControlNet</strong>：灵活度高，但要懂技术。</li>
+</ul>
+
+<h2>商品一致性的难点</h2>
+<p>这是 AI 试衣最大的技术坎。<strong>衣服的颜色、图案、文字标签必须和实物分毫不差</strong>，否则就是虚假宣传。纯 AI 生成容易"编造"细节。目前的稳妥做法是：<strong>实拍衣服 + AI 换模特/背景</strong>，保证商品真实、环境虚拟。</p>
+
+<h2>合规边界要守住</h2>
+<ul>
+<li><strong>不能虚假宣传</strong>：AI 改了商品外观（比如把红色 P 成蓝色）属违规。</li>
+<li><strong>模特授权</strong>：用真人脸做 AI 模特需获肖像授权。</li>
+<li><strong>标注 AI</strong>：部分平台要求 AI 生成的模特图需显著标识。</li>
+</ul>`,
+    en: `<h2>AI Puts Clothes on You—No Shoot Needed</h2>
+<p>AI virtual try-on has leaped. Users upload a photo and AI dresses them; merchants use AI models instead of costly shoots. For e-commerce, it's real cost savings.</p>
+
+<h2>For Consumers: Try-On Without the Store</h2>
+<p>Upload a full-body photo, pick an item, get an image in seconds. Done well, it shows fit, length, and whether the color suits you. Cutting returns is the biggest shared value for buyers and sellers.</p>
+
+<h2>For Merchants: AI Models Replace Shoots</h2>
+<p>Traditional shoots cost thousands to tens of thousands—model, studio, lighting, retouching. AI models take a flat-lay photo, dress a virtual model, and swap skin tones and body types. Cost drops to a tenth.</p>
+
+<h2>Tools and Their Strengths</h2>
+<ul>
+<li><strong>OOTDiffusion, LeapME</strong>: open-source, self-hostable for tech teams.</li>
+<li><strong>Alibaba, JD commercial APIs</strong>: best product consistency—first choice for domestic e-commerce.</li>
+<li><strong>Krea, Flux + ControlNet</strong>: flexible but technical.</li>
+</ul>
+
+<h2>The Product-Consistency Challenge</h2>
+<p>The hardest technical hurdle. Color, pattern, and label must match the real item exactly—otherwise it's false advertising. Pure AI invents details. The safe approach: shoot the item, AI swaps model/background—real product, virtual environment.</p>`
+  },
+
+  /* ===== ai-livestream-setup-guide ===== */
+  "ai-livestream-setup-guide": {
+    zh: `<h2>数字人直播，已经从噱头变成标配</h2>
+<p>去年数字人直播还被嘲"假"，今年主流电商平台都接入了。<strong>原因很简单：它能在真人主播下播后继续守夜场、守长尾，把流量榨干。</strong>我把搭建流程完整走了一遍，给你一份能跑通的清单。</p>
+
+<h2>第一步：选型——买软件还是用平台</h2>
+<ul>
+<li><strong>平台内置</strong>：抖音、淘宝、视频号都支持数字人，门槛最低。</li>
+<li><strong>独立软件</strong>：硅基、闪剪、腾讯智影，可定制形象、多平台分发。</li>
+<li><strong>自研</strong>：技术团队用 HeyGen/D-ID 的 API 自建，灵活但贵。</li>
+</ul>
+<p><strong>新手建议从平台内置起步，跑通模式后再上独立软件。</strong></p>
+
+<h2>第二步：形象和话术</h2>
+<p>形象要<strong>符合品类调性</strong>：卖美妆用精致女模，卖数码用专业男模。话术别用 AI 一把梭——<strong>把爆款直播的话术结构（开场钩子 + 痛点 + 卖点 + 促单）喂给 AI，让它按这个结构生成</strong>，再人工润色。纯 AI 话术没人味，留不住人。</p>
+
+<h2>第三步：直播中控的关键</h2>
+<ul>
+<li><strong>商品上下架同步</strong>：数字人说"3 号链接"时，购物车要同步弹出。</li>
+<li><strong>实时互动</strong>：观众评论要能识别并回应（AI 接管或人工介入）。</li>
+<li><strong>数据监控</strong>：停留时长、转化率实时看，不行就换话术。</li>
+</ul>
+
+<h2>平台规则的红线</h2>
+<p><strong>必须显著标识"AI 生成"或"虚拟主播"</strong>。不能冒充真人，不能做虚假承诺（"最后一天"循环说）。部分类目（医疗、金融）限制虚拟主播。<strong>开播前务必查最新规则，违规直接封号。</strong></p>
+
+<h2>设备与软件清单（能跑通的版本）</h2>
+<ul>
+<li>一台中等配置电脑（i5/16G 以上）</li>
+<li>数字人软件（硅基/闪剪基础版，约几百/月）</li>
+<li>OBS 推流（免费）</li>
+<li>稳定网络（上行 10Mbps 以上）</li>
+</ul>`,
+    en: `<h2>Virtual Livestreaming Went From Gimmick to Standard</h2>
+<p>Last year's virtual streams were mocked as "fake"; this year mainstream platforms integrate them. The reason: they hold night and long-tail hours after humans log off, maximizing traffic. Here's a runnable setup.</p>
+
+<h2>Step 1: Choose—Platform or Software</h2>
+<ul>
+<li><strong>Platform-built-in</strong>: Douyin, Taobao, Video accounts support virtuals—lowest barrier.</li>
+<li><strong>Standalone software</strong>: Sige, ShanJian, Tencent ZhiYing—custom avatars, multi-platform.</li>
+<li><strong>Self-built</strong>: HeyGen/D-ID APIs—flexible but pricey.</li>
+</ul>
+
+<h2>Step 2: Avatar and Script</h2>
+<p>Avatar must fit the category—beauty: polished female model; tech: professional male. Don't let AI freestyle the script—feed it proven livestream structure (hook + pain point + benefit + push), then polish by hand. Pure AI feels cold and loses viewers.</p>
+
+<h2>Step 3: Live Control Essentials</h2>
+<ul>
+<li><strong>Cart sync</strong>: when the avatar says "link 3," the cart pops.</li>
+<li><strong>Real-time interaction</strong>: recognize and respond to comments (AI or human).</li>
+<li><strong>Data monitoring</strong>: watch retention and conversion live—swap scripts if weak.</li>
+</ul>
+
+<h2>Platform Red Lines</h2>
+<p><strong>Mark "AI-generated" or "virtual host" prominently.</strong> No impersonating real people, no false promises (looping "last day"). Some categories (medical, finance) restrict virtuals. Check latest rules before going live—violations mean bans.</p>`
+  },
+
+  /* ===== runway-gen-4-video-guide ===== */
+  "runway-gen-4-video-guide": {
+    zh: `<h2>Runway 这次的进化，戳中了视频创作的真痛点</h2>
+<p>Runway Gen-4 我用了两周，最大的感受是：<strong>它终于解决了 AI 视频最致命的问题——角色不一致。</strong>以前换个镜头，主角的脸就变了；现在同一个角色能贯穿多个镜头，这才是能做叙事内容的基础。</p>
+
+<h2>角色一致性：从"几乎不可能"到"基本能用"</h2>
+<p>我设计了一个角色，让 Gen-4 在 5 个不同镜头里生成他（走路、坐下、回头、对话、远景）。5 个镜头里，有 4 个角色高度一致，第 5 个略有色差但能识别。<strong>对比之前一代，这是从 0 到 1 的突破。</strong></p>
+
+<h2>运动笔刷：精准控制动什么、怎么动</h2>
+<p>Gen-4 的 Motion Brush 能指定画面里某个区域怎么动。比如让"只有水面波动、其他静止"，或者"镜头向左推、人物不动"。<strong>这种精细控制，是 AI 视频从"抽奖"走向"可控创作"的关键。</strong></p>
+
+<h2>和 Sora 2 的同题对比</h2>
+<p>我用同样的脚本测了两个。Sora 2 在<strong>画面质感和物理真实感</strong>上仍领先；Runway Gen-4 在<strong>角色一致性和运动控制</strong>上更稳。<strong>选型看你的内容偏叙事（选 Runway）还是偏视觉大片（选 Sora）。</strong></p>
+
+<h2>三个实用场景</h2>
+<ul>
+<li><strong>短视频剧情</strong>：角色一致 + 运镜控制，能做出有连贯性的小故事。</li>
+<li><strong>广告片</strong>：产品 + 人物 + 场景，分镜可控，成片率高。</li>
+<li><strong>概念可视化</strong>：把想法快速变成动态 demo 给客户看。</li>
+</ul>
+
+<h2>成本与上手</h2>
+<p>Runway 按积分计费，一条 10 秒视频大概 1-3 美元。界面比 Sora 友好，学习曲线平缓。<strong>中小团队和独立创作者，Runway Gen-4 是性价比最高的选择。</strong></p>`,
+    en: `<h2>Runway's Upgrade Hits the Real Pain Point of Video Creation</h2>
+<p>After two weeks with Gen-4: it finally solves AI video's fatal flaw—inconsistent characters. Before, a new shot meant a new face; now one character persists across shots. That's the foundation for narrative content.</p>
+
+<h2>Character Consistency: From "Nearly Impossible" to "Mostly Usable"</h2>
+<p>I designed a character and generated five shots (walking, sitting, turning, talking, wide). Four were highly consistent; the fifth had slight color drift but recognizable. Versus Gen-3, this is a 0-to-1 breakthrough.</p>
+
+<h2>Motion Brush: Precise Control of What Moves, How</h2>
+<p>Gen-4's Motion Brush designates how an area moves—"only the water ripples, the rest still," or "camera pushes left, character static." This fine control moves AI video from "slot machine" to "directed creation."</p>
+
+<h2>Same Prompt vs Sora 2</h2>
+<p>Sora 2 still leads on visual quality and physics realism; Runway Gen-4 is steadier on character consistency and motion control. Pick by content—narrative favors Runway, visual spectacles favor Sora.</p>
+
+<h2>Three Practical Scenarios</h2>
+<ul>
+<li><strong>Short-form drama</strong>: consistent characters plus controlled camera—coherent mini-stories.</li>
+<li><strong>Ads</strong>: product + person + scene, controllable shots, high yield.</li>
+<li><strong>Concept visualization</strong>: turn ideas into dynamic demos for clients.</li>
+</ul>`
+  },
+
+  /* ===== pika-2-video-generation ===== */
+  "pika-2-video-generation": {
+    zh: `<h2>Pika 不拼大而全，拼有趣</h2>
+<p>AI 视频三强里（Sora、Runway、Pika），Pika 走的是<strong>"小而美"路线</strong>。它不和你卷画质、卷时长，而是把特效和创意玩法做到极致。<strong>做社媒爆款、整活视频，它是最顺手的。</strong></p>
+
+<h2>Pika 2.0 的杀手锏：创意特效</h2>
+<p>它内置了一堆一键特效：<strong>膨胀、爆炸、融化、变成气球、蛋糕砸脸</strong>……这些在短视频平台超火的整活效果，Pika 一个按钮就出。Sora 和 Runway 要做这些得费劲写 prompt，Pika 直接模块化。</p>
+
+<h2>实测几个爆款特效</h2>
+<ul>
+<li><strong>"膨胀变成气球飞走"</strong>：给一张人像，效果滑稽，社媒传播力强。</li>
+<li><strong>"融化成一滩"</strong>：恐怖又好笑，万圣节题材绝佳。</li>
+<li><strong>"蛋糕里蹦出惊喜"</strong>：生日、品牌礼物的创意玩法。</li>
+</ul>
+<p><strong>这些特效的传播属性，比"高质量但无聊"的视频强十倍。</strong></p>
+
+<h2>Pika 适合什么内容</h2>
+<ul>
+<li><strong>社媒整活</strong>：抖音、TikTok 的猎奇爆款，Pika 是制造机。</li>
+<li><strong>品牌趣味营销</strong>：用特效包装产品，比硬广有趣。</li>
+<li><strong>个人创意表达</strong>：想做点好玩的东西，Pika 门槛最低。</li>
+</ul>
+
+<h2>它的短板</h2>
+<p>画质和物理真实感不如 Sora、Runway；叙事性长视频做不了。<strong>别拿它拍正经广告片，它是"整活专用"。</strong>但在这个定位上，它几乎没有对手。</p>
+
+<h2>价格和上手</h2>
+<p>Pika 有免费额度，付费档也很便宜，对学生和创作者友好。界面极简，几分钟上手。<strong>如果你做社媒内容，Pika 值得常备，专门用来出"整活"素材。</strong></p>`,
+    en: `<h2>Pika Doesn't Aim for Big—It Aims for Fun</h2>
+<p>Among the AI video big three (Sora, Runway, Pika), Pika takes the "compact and beautiful" path. It doesn't compete on quality or length—it takes effects and creative play to the extreme. For viral social content, it's the smoothest.</p>
+
+<h2>Pika 2.0's Killer Feature: Creative Effects</h2>
+<p>Built-in one-click effects: inflate, explode, melt, balloon, cake-in-face... the viral gags of short-video platforms, modularized. Sora and Runway need heavy prompting; Pika does it with a button.</p>
+
+<h2>Tested Viral Effects</h2>
+<ul>
+<li><strong>"Inflate into a balloon and float"</strong>: a portrait turns hilarious—strong social spread.</li>
+<li><strong>"Melt into a puddle"</strong>: creepy-funny, perfect for Halloween.</li>
+<li><strong>"Surprise pops from cake"</strong>: birthdays, brand gifts.</li>
+</ul>
+<p>These effects spread ten times better than "high-quality but boring" video.</p>
+
+<h2>What Pika Fits</h2>
+<ul>
+<li><strong>Social gags</strong>: Douyin, TikTok viral oddities—Pika is the factory.</li>
+<li><strong>Brand fun marketing</strong>: wrap products in effects—more fun than hard ads.</li>
+<li><strong>Personal creativity</strong>: lowest barrier for making something fun.</li>
+</ul>
+
+<h2>Its Weak Spots</h2>
+<p>Quality and physics trail Sora and Runway; long narrative video isn't its thing. Don't shoot serious ads with it—it's the "fun specialist." But in that niche, it has few rivals.</p>`
+  },
+
+  /* ===== ai-voiceover-tts-commercial ===== */
+  "ai-voiceover-tts-commercial": {
+    zh: `<h2>真人配音的活，AI 接走了七成</h2>
+<p>两年前 AI 配音还一听就假，现在<strong>大部分非真人特色的配音场景，AI 已经能直接交付</strong>。视频解说、产品介绍、课程旁白、有声书——AI 配音成了性价比之选。但商用要避几个坑。</p>
+
+<h2>主流 TTS 工具横评</h2>
+<ul>
+<li><strong>ElevenLabs</strong>：音色最自然、情感最丰富，但价格贵，英文强于中文。</li>
+<li><strong>微软 Azure TTS</strong>：中文音色多、稳定，企业首选，价格合理。</li>
+<li><strong>阿里、讯飞</strong>：国产中文最地道，方言支持好，国内业务首选。</li>
+<li><strong>字节火山引擎</strong>：音色年轻化，适合短视频。</li>
+</ul>
+
+<h2>选型的三个维度</h2>
+<p><strong>音色自然度</strong>：听样音，注意断句、重音、情感。<strong>商用授权</strong>：必须确认许可证允许商用，有的只许个人用。<strong>API 稳定性</strong>：批量生产时，稳定性比单次效果更重要。</p>
+
+<h2>版权避坑（重点）</h2>
+<ul>
+<li><strong>不能用真人明星的声音</strong>：克隆名人声音商用，无论哪个平台都违法。</li>
+<li><strong>平台自带音色的授权范围</strong>：看清是"内部使用"还是"可公开发布"。</li>
+<li><strong>付费 ≠ 可商用</strong>：有些工具付费只是解锁功能，商用要额外授权。</li>
+</ul>
+
+<h2>AI 配音的局限</h2>
+<p><strong>情感爆发力不如真人</strong>：朗读诗歌、广告slogan的高潮，AI 还是有点平。<strong>专业术语容易读错</strong>：医学、法律、技术词汇要人工校对发音。<strong>长篇容易"飘"</strong>：超过 10 分钟，语调和节奏会变单调。</p>
+
+<h2>最佳实践</h2>
+<p><strong>AI 出初稿 + 人工精修关键段落</strong>。短视频、产品介绍全程 AI；课程、有声书的重点章节人工介入。这样既省成本，又保质量。</p>`,
+    en: `<h2>AI Voiceover Took 70% of Human Narration Work</h2>
+<p>Two years ago AI voiceover sounded fake; today most non-distinctive narration scenarios ship directly from AI. Video narration, product intros, course voice-overs, audiobooks—AI is the cost-effective pick. But commercial use has pitfalls.</p>
+
+<h2>Major TTS Tools Compared</h2>
+<ul>
+<li><strong>ElevenLabs</strong>: most natural, richest emotion—pricey, English over Chinese.</li>
+<li><strong>Microsoft Azure TTS</strong>: many Chinese voices, stable—enterprise first choice, fair price.</li>
+<li><strong>Alibaba, iFlytek</strong>: most idiomatic Chinese, dialect support—domestic business first.</li>
+<li><strong>ByteDance Volcano Engine</strong>: youthful voices, good for short video.</li>
+</ul>
+
+<h2>Three Selection Dimensions</h2>
+<p><strong>Naturalness</strong>: listen to samples—phrasing, stress, emotion. <strong>Commercial license</strong>: confirm commercial use is allowed; some are personal-only. <strong>API stability</strong>: for batch production, stability beats one-off quality.</p>
+
+<h2>Copyright Pitfalls (Key)</h2>
+<ul>
+<li><strong>No real-celebrity voices</strong>: cloning celebrities commercially is illegal everywhere.</li>
+<li><strong>Platform voice license scope</strong>: clarify "internal" vs "public release."</li>
+<li><strong>Paid ≠ commercial</strong>: some tools unlock features only; commercial needs extra license.</li>
+</ul>
+
+<h2>AI Voiceover Limits</h2>
+<p><strong>Less emotional punch than humans</strong>: poem climaxes, ad-slogan peaks stay flat. <strong>Misreads jargon</strong>: medical, legal, tech terms need human pronunciation checks. <strong>Drifts over long form</strong>: beyond 10 minutes, tone and rhythm flatten.</p>`
+  },
+
+  /* ===== ai-translation-subtitle-realtime ===== */
+  "ai-translation-subtitle-realtime": {
+    zh: `<h2>翻译这件事，AI 把效率翻了倍</h2>
+<p>传统的视频字幕翻译，一集美剧要字幕组忙好几天。现在<strong>用 AI，从听写到翻译到时间轴，几分钟出初稿</strong>。跨境内容出海、海外会议、多语言文档，AI 翻译已是必备工具。</p>
+
+<h2>视频字幕：完整流程</h2>
+<p>我用一个 10 分钟的英文 YouTube 视频测了。流程是：<strong>Whisper 听写生成带时间轴的字幕 → AI 翻译成中文 → 人工校对</strong>。从原视频到中文字幕，全程不到 5 分钟，准确率 85% 以上。<strong>剩下的 15% 人工校对，比从零翻译快十倍。</strong></p>
+
+<h2>实时同传：能用了，但别全信</h2>
+<p>会议场景，AI 实时翻译（中英互译）已经能做到基本可用。延迟几秒，主要意思能传达。但<strong>专业术语、人名、数字容易错</strong>。重要会议建议 AI 同传 + 人工记录双轨，事后核对。</p>
+
+<h2>多语言翻译质量实测</h2>
+<ul>
+<li><strong>中英</strong>：质量最高，主要意思基本无误。</li>
+<li><strong>中日</strong>：不错，但敬语、文化语境偶尔偏差。</li>
+<li><strong>中葡/中阿</strong>：质量明显下降，需更多人工介入。</li>
+<li><strong>规律</strong>：英语相关语种最好，小语种要警惕。</li>
+</ul>
+
+<h2>术语库：专业翻译的秘密武器</h2>
+<p>给 AI 提供一份<strong>术语表</strong>（行业专有名词的标准译法），翻译质量飞跃。比如把"用户获取成本"统一译成 CAC，AI 就不会一会儿"获客成本"一会儿"用户获取费用"。<strong>这是 AI 翻译从"能用"到"专业"的关键。</strong></p>
+
+<h2>最佳实践</h2>
+<ul>
+<li><strong>分层处理</strong>：AI 出初稿，人工校对关键内容。</li>
+<li><strong>建术语库</strong>：行业词汇统一，提升一致性。</li>
+<li><strong>保留原文对照</strong>：方便事后核查和修改。</li>
+</ul>`,
+    en: `<h2>AI Doubled Translation Efficiency</h2>
+<p>Traditional subtitle translation took a fansub days per episode. Now AI handles transcription, translation, and timecodes in minutes. For global content, overseas meetings, and multilingual docs, AI translation is essential.</p>
+
+<h2>Video Subtitles: Full Workflow</h2>
+<p>A 10-minute English YouTube video: Whisper transcribes with timecodes → AI translates to Chinese → human proofreads. Five minutes end-to-end, 85%+ accuracy. The 15% human pass is ten times faster than translating from scratch.</p>
+
+<h2>Real-Time Interpretation: Usable, but Verify</h2>
+<p>Live Chinese-English interpretation is basically workable—seconds of latency, main meaning conveyed. But jargon, names, and numbers err easily. For key meetings, run AI + human notes in parallel and reconcile after.</p>
+
+<h2>Multilingual Quality Tested</h2>
+<ul>
+<li><strong>Chinese-English</strong>: highest quality, main meaning mostly correct.</li>
+<li><strong>Chinese-Japanese</strong>: decent, but honorifics and cultural nuance drift.</li>
+<li><strong>Chinese-Portuguese/Arabic</strong>: noticeably weaker, needs more human input.</li>
+<li><strong>Pattern</strong>: English-related languages best; minor languages need caution.</li>
+</ul>
+
+<h2>Glossaries: The Pro Translator's Secret Weapon</h2>
+<p>Provide AI a glossary (standard translations of industry terms) and quality leaps. "User acquisition cost" always becomes CAC; AI won't waver between near-synonyms. This is the step from "usable" to "professional."</p>`
+  },
+
+  /* ===== openai-operator-browser-agent ===== */
+  "openai-operator-browser-agent": {
+    zh: `<h2>让 AI 替你点鼠标，靠谱吗</h2>
+<p>Operator 是 OpenAI 的浏览器 Agent——你给它一个目标，它自己打开浏览器、点页面、填表单、完成操作。<strong>听起来像科幻，实测下来它确实能干活，但边界很明确。</strong></p>
+
+<h2>我让它干了三件事</h2>
+<p><strong>订机票</strong>：给它出发地、目的地、日期，它去携程/航司查询、比价、填信息。能走到支付前那一步（支付环节它停下让人确认，这是对的安全设计）。<strong>填复杂表单</strong>：一份有 30 个字段的签证申请，它根据我提供的信息填了 90%。<strong>比价</strong>：让它查同一款相机在三个平台的价格，它汇总成表格。</p>
+
+<h2>任务完成率：乐观但别全信</h2>
+<p>简单任务（订餐、查信息、填基础表单）完成率高。复杂任务（涉及验证码、动态加载、反爬机制）会卡住。<strong>它能完成大约 60% 的中等复杂任务，剩下 40% 需要人工接管。</strong></p>
+
+<h2>它能干好什么</h2>
+<ul>
+<li><strong>重复性网页操作</strong>：每天要填的报表、要查的数据。</li>
+<li><strong>跨网站比价和信息汇总</strong>：它不嫌烦。</li>
+<li><strong>填表单</strong>：尤其是长表单，省时间明显。</li>
+</ul>
+
+<h2>它干不好什么</h2>
+<p><strong>验证码、滑块验证</strong>：基本过不去。<strong>需要即时判断的操作</strong>：比如"这张图里哪个是按钮"，它偶尔会点错。<strong>涉及钱的最终确认</strong>：它不该、也确实不会自动完成支付。</p>
+
+<h2>安全边界（必须说清）</h2>
+<ul>
+<li><strong>支付前必须人工确认</strong>：Operator 会在涉及支付时停下，这是正确设计。</li>
+<li><strong>别让它碰敏感账户</strong>：银行、证券账户别交给它操作。</li>
+<li><strong>留意它的每一步</strong>：Operator 有操作日志，定期看它做了什么。</li>
+</ul>
+
+<h2>现在的定位</h2>
+<p>Operator 还在早期，<strong>把它当"网页操作助理"，处理那些繁琐、低风险的网页任务</strong>。随着模型进步，它的能力边界会快速扩大，现在开始熟悉它，是为未来做准备。</p>`,
+    en: `<h2>Letting AI Click for You—Is It Reliable?</h2>
+<p>Operator is OpenAI's browser agent—give it a goal and it opens the browser, clicks, fills forms, and completes actions. Sounds sci-fi; in practice it works, but with clear limits.</p>
+
+<h2>Three Tasks I Gave It</h2>
+<p><strong>Book a flight</strong>: origin, destination, date—it searched, compared, filled info, stopped before payment (correct safety design). <strong>Complex form</strong>: a 30-field visa application filled 90% from my info. <strong>Price compare</strong>: same camera across three platforms, summarized in a table.</p>
+
+<h2>Completion Rate: Optimistic, but Verify</h2>
+<p>Simple tasks (ordering, lookups, basic forms) complete reliably. Complex tasks (CAPTCHAs, dynamic loading, anti-bot) stall. It completes ~60% of mid-complexity tasks; the rest need human takeover.</p>
+
+<h2>What It Does Well</h2>
+<ul>
+<li><strong>Repetitive web operations</strong>: daily reports, daily lookups.</li>
+<li><strong>Cross-site comparison and aggregation</strong>: it doesn't get bored.</li>
+<li><strong>Forms</strong>: especially long ones—clear time savings.</li>
+</ul>
+
+<h2>What It Struggles With</h2>
+<p><strong>CAPTCHAs, sliders</strong>: basically can't pass. <strong>Snap judgments</strong>: "which is the button"—occasionally clicks wrong. <strong>Final money confirmation</strong>: it shouldn't and doesn't auto-complete payments.</p>
+
+<h2>Security Boundaries (Must Be Clear)</h2>
+<ul>
+<li><strong>Human approval before payment</strong>: Operator pauses at payment—correct design.</li>
+<li><strong>Avoid sensitive accounts</strong>: banks, brokerages.</li>
+<li><strong>Watch each step</strong>: Operator logs actions—review regularly.</li>
+</ul>`
+  },
+
+  /* ===== ai-excel-copilot-pro-guide ===== */
+  "ai-excel-copilot-pro-guide": {
+    zh: `<h2>不用再背函数了，开口就行</h2>
+<p>Excel 里集成的 Copilot，是<strong>对 Excel 重度用户最实用的 AI 升级</strong>。以前要查 VLOOKUP 怎么写、透视表怎么拉，现在用大白话告诉它你要什么，它直接给你写好公式、做好表。</p>
+
+<h2>用自然语言写公式</h2>
+<p>我在一列销售额旁边，输入"帮我算每个销售的提成，规则是 10 万以上 5%，以下 3%"。Copilot 直接生成了 IF 函数公式，填好了整列。<strong>告别查函数语法、写错调试的日子。</strong></p>
+
+<h2>三个高频场景实测</h2>
+<ul>
+<li><strong>VLOOKUP 跨表匹配</strong>：说"把另一张表的部门匹配过来"，它写好公式。</li>
+<li><strong>条件格式</strong>：说"销售额低于 5 万的标红"，它配好规则。</li>
+<li><strong>动态图表</strong>：说"做一个各月份销售趋势的折线图"，它出图。</li>
+</ul>
+
+<h2>透视表也开口化了</h2>
+<p>透视表是 Excel 的灵魂功能，但很多人不会用。现在说"按地区和产品分类汇总销售额"，Copilot 直接生成透视表。<strong>把"懂 Excel"的门槛降到了"会说话"。</strong></p>
+
+<h2>它的局限</h2>
+<p><strong>复杂业务逻辑它会猜</strong>：比如"什么算有效客户"，这种业务定义它可能理解错，要确认。<strong>数据量大时慢</strong>：十几万行以上，响应明显变慢。<strong>不能连接外部数据源</strong>：只能处理当前表里的数据。</p>
+
+<h2>怎么问效果好</h2>
+<ul>
+<li><strong>说清规则</strong>：把计算逻辑、判断条件讲明白，别让它猜。</li>
+<li><strong>给样例</strong>："比如张三卖了 12 万，提成应该是 6000"——它更准。</li>
+<li><strong>分步做</strong>：复杂需求拆成几步，一步一个公式更可控。</li>
+</ul>
+
+<h2>值不值得买</h2>
+<p>Copilot Pro 每月 20 多美元。如果你每周用 Excel 超过 5 小时，<strong>它省下的时间值回票价</strong>。偶尔用用的，免费版的基础能力也够日常。</p>`,
+    en: `<h2>No More Memorizing Functions—Just Ask</h2>
+<p>Excel's integrated Copilot is the most practical AI upgrade for heavy users. Forget looking up VLOOKUP or pivot setup—tell it what you want in plain language and it writes formulas and builds tables.</p>
+
+<h2>Formulas in Natural Language</h2>
+<p>Next to a sales column, I typed "calculate commission: 5% above 100k, 3% below." Copilot generated the IF formula and filled the column. No more syntax hunting and debugging.</p>
+
+<h2>Three High-Frequency Scenarios</h2>
+<ul>
+<li><strong>VLOOKUP cross-sheet</strong>: "match department from the other sheet"—it writes the formula.</li>
+<li><strong>Conditional formatting</strong>: "flag sales below 50k red"—it sets the rule.</li>
+<li><strong>Dynamic charts</strong>: "monthly sales trend line chart"—it charts.</li>
+</ul>
+
+<h2>Pivot Tables Now Speak</h2>
+<p>Pivots are Excel's soul, but many can't use them. Say "summarize sales by region and product" and Copilot builds the pivot. The "knows Excel" bar drops to "can talk."</p>
+
+<h2>Its Limits</h2>
+<p><strong>Guesses complex logic</strong>: "what's a valid customer"—verify business definitions. <strong>Slow on big data</strong>: 100k+ rows, noticeable lag. <strong>No external sources</strong>: works only on current sheet data.</p>
+
+<h2>How to Ask Well</h2>
+<ul>
+<li><strong>State the rules</strong>: explain logic and conditions—don't let it guess.</li>
+<li><strong>Give examples</strong>: "Zhang sold 120k, commission should be 6000"—more accurate.</li>
+<li><strong>Step by step</strong>: split complex needs into steps, one formula each.</li>
+</ul>`
+  },
+
+  /* ===== mcp-model-context-protocol-explained ===== */
+  "mcp-model-context-protocol-explained": {
+    zh: `<h2>MCP 是什么：给大模型装的"USB 接口"</h2>
+<p>Anthropic 推出的 MCP（Model Context Protocol，模型上下文协议），正在成为 AI 连接外部工具的标准。<strong>用大白话讲：它就像大模型的 USB 接口——插上不同的"设备"（数据库、文件、API），模型就能用它们。</strong></p>
+
+<h2>为什么需要 MCP</h2>
+<p>大模型本身是"孤岛"——它不知道你的数据库里有什么、你的内部 API 怎么调、你的文件在哪。<strong>以前每个工具都要单独给模型写对接代码，碎片化严重。</strong>MCP 提供统一协议，写一次对接，所有支持 MCP 的模型都能用。</p>
+
+<h2>它怎么工作（不涉及技术细节）</h2>
+<p>想象三个角色：<strong>模型</strong>（大脑）、<strong>MCP 服务器</strong>（翻译官）、<strong>你的工具</strong>（数据库/API）。模型说"我要查销售数据"，MCP 服务器把这话翻译成数据库查询，把结果再翻译回给模型。<strong>模型不用懂你的数据库，数据库不用懂模型，MCP 居中协调。</strong></p>
+
+<h2>实操：接一个数据库</h2>
+<p>我给 Claude 接了一个本地的 SQLite 数据库。流程是：装一个 MCP 服务器（官方有现成的）→ 配置数据库路径 → 在 Claude 里启用。<strong>之后我能直接用自然语言问 Claude："上个月销量 top 5 的产品"，它自己查数据库回答。</strong></p>
+
+<h2>能接什么</h2>
+<ul>
+<li><strong>数据库</strong>：SQL、NoSQL 都支持。</li>
+<li><strong>文件系统</strong>：让模型读写你本地的文件。</li>
+<li><strong>API</strong>：内网 API、第三方服务（GitHub、Slack）。</li>
+<li><strong>浏览器</strong>：让模型能上网查信息。</li>
+</ul>
+
+<h2>为什么它重要</h2>
+<p>MCP 把"AI + 你的数据/工具"的对接成本，从<strong>每个工具单独开发</strong>降到了<strong>写一次通用协议</strong>。这意味着 AI 助手能真正接入你的工作流，而不是停在"聊天"阶段。<strong>这是 AI 从"对话工具"走向"工作伙伴"的关键基建。</strong></p>`,
+    en: `<h2>What Is MCP: The "USB Port" for LLMs</h2>
+<p>Anthropic's MCP (Model Context Protocol) is becoming the standard for AI-to-tool connections. In plain terms: it's a USB port for LLMs—plug in different "devices" (databases, files, APIs) and the model can use them.</p>
+
+<h2>Why MCP Exists</h2>
+<p>LLMs are islands—they don't know your database, internal APIs, or files. Every tool needed bespoke integration code, fragmenting everything. MCP provides one protocol: write once, all MCP-supporting models can use it.</p>
+
+<h2>How It Works (No Tech Details)</h2>
+<p>Three roles: the model (brain), the MCP server (translator), your tool (database/API). The model says "query sales data," the server translates to a DB query, returns results to the model. The model doesn't learn your DB; the DB doesn't learn the model—MCP bridges them.</p>
+
+<h2>Hands-On: Connecting a Database</h2>
+<p>I connected Claude to a local SQLite DB: install an MCP server (official ones exist) → configure the DB path → enable in Claude. Now I ask in plain language: "top 5 products last month"—Claude queries and answers itself.</p>
+
+<h2>What You Can Connect</h2>
+<ul>
+<li><strong>Databases</strong>: SQL, NoSQL.</li>
+<li><strong>File systems</strong>: read/write local files.</li>
+<li><strong>APIs</strong>: internal APIs, third-party services (GitHub, Slack).</li>
+<li><strong>Browser</strong>: let the model search the web.</li>
+</ul>
+
+<h2>Why It Matters</h2>
+<p>MCP drops the integration cost from "build per tool" to "one universal protocol." AI assistants can finally plug into your workflow instead of stopping at chat. It's the key infrastructure for AI moving from "chat tool" to "work partner."</p>`
+  },
+
+  /* ===== perplexity-ai-search-deep-guide ===== */
+  "perplexity-ai-search-deep-guide": {
+    zh: `<h2>Perplexity 不只是搜索，是会搜索的研究助手</h2>
+<p>很多人把 Perplexity 当"另一个谷歌"用，这就太浪费了。<strong>它的 Focus、Collections、Pro Search 才是真正的杀手锏。</strong>用好这几个功能，它顶半个研究助理。</p>
+
+<h2>Pro Search：让它多想几步</h2>
+<p>普通搜索给一个答案，Pro Search 会<strong>把你的问题拆成多个子问题，分别搜索，再综合</strong>。我问"2026 年哪个国产电动车的电池技术领先"，它拆成"各品牌电池供应商、技术路线、实测续航"几个方向，给出带引用的综合答案。<strong>这种深度，传统搜索引擎给不了。</strong></p>
+
+<h2>Focus 模式：限定搜索范围</h2>
+<ul>
+<li><strong>Academic</strong>：只搜学术论文，做文献综述神器。</li>
+<li><strong>YouTube</strong>：搜视频内容，找教程最快。</li>
+<li><strong>Reddit</strong>：搜真实用户讨论，避开广告软文。</li>
+<li><strong>Social</strong>：搜社媒动态，了解舆论。</li>
+</ul>
+<p><strong>选对 Focus，结果质量和相关度直接翻倍。</strong></p>
+
+<h2>Collections：把研究组织起来</h2>
+<p>做一个课题调研，会搜几十上百次。Collections 让你把相关搜索归到一个"项目"里，还能让 AI 基于这些搜索写综合报告。<strong>这是从"搜索"到"研究"的关键一步。</strong></p>
+
+<h2>高阶用法：跟踪行业动态</h2>
+<p>Perplexity 能<strong>定时帮你搜索某个话题的最新进展</strong>，汇总成简报。做投资研究、跟踪竞品、关注技术趋势，这个功能省下大量手动刷新的时间。</p>
+
+<h2>引用要核对</h2>
+<p>Perplexity 会标注每条信息的来源，<strong>但来源本身可能有错</strong>。重要决策前，点进引用看原文。它比纯大模型靠谱（因为有引用），但比人工调研快、不如人工准——<strong>定位是"快速拿到 80 分的答案"。</strong></p>`,
+    en: `<h2>Perplexity Isn't Just Search—It's a Research Assistant That Searches</h2>
+<p>Many use Perplexity as "another Google"—a waste. Focus, Collections, and Pro Search are the real killers. Used well, it's half a research assistant.</p>
+
+<h2>Pro Search: Let It Think in Steps</h2>
+<p>Regular search gives one answer; Pro Search decomposes your question into sub-questions, searches each, and synthesizes with citations. "Which Chinese EV leads in battery tech in 2026" splits into suppliers, tech paths, range tests—a depth traditional engines can't give.</p>
+
+<h2>Focus Modes: Scope the Search</h2>
+<ul>
+<li><strong>Academic</strong>: papers only—literature review magic.</li>
+<li><strong>YouTube</strong>: video content—fastest for tutorials.</li>
+<li><strong>Reddit</strong>: real user discussion—avoid ads and sponsored content.</li>
+<li><strong>Social</strong>: social posts—understand sentiment.</li>
+</ul>
+<p>Picking the right Focus doubles quality and relevance.</p>
+
+<h2>Collections: Organize Research</h2>
+<p>A topic study means dozens of searches. Collections group related searches into a "project" and let AI write synthesis reports from them. This is the step from "search" to "research."</p>
+
+<h2>Advanced: Track Industry</h2>
+<p>Perplexity schedules searches on a topic and summarizes the latest. For investment research, competitor tracking, tech trends—this saves hours of manual refreshing.</p>
+
+<h2>Verify Citations</h2>
+<p>Perplexity tags sources, but <strong>sources can be wrong</strong>. Before key decisions, click through to originals. More reliable than pure LLMs (citations), faster than manual research, less accurate—positioned as "fast 80-point answers."</p>`
+  },
+
+  /* ===== ollama-local-llm-deployment ===== */
+  "ollama-local-llm-deployment": {
+    zh: `<h2>在自己电脑上，跑一个私有大模型</h2>
+<p>Ollama 是目前<strong>本地部署大模型最容易的工具</strong>。一行命令装好，一行命令拉模型，再用一行命令启动对话。<strong>数据不出本机，完全私有，永久免费。</strong>对数据敏感的企业、想学习的研究者，它是首选。</p>
+
+<h2>三步跑起来</h2>
+<ul>
+<li><strong>安装</strong>：官网下载安装包（Win/Mac/Linux 都有），一路下一步。</li>
+<li><strong>拉模型</strong>：终端敲 <code>ollama run qwen2.5</code>（或 llama3、deepseek-r1）。</li>
+<li><strong>对话</strong>：等模型下载完，直接在终端聊天。</li>
+</ul>
+<p><strong>从零到能用，不超过十分钟。</strong>没有 Docker、没有显卡驱动折腾、没有环境配置地狱。</p>
+
+<h2>模型怎么选</h2>
+<ul>
+<li><strong>Qwen2.5（7B）</strong>：中文最好，日常对话和写作首选。</li>
+<li><strong>Llama 3.1（8B）</strong>：英文和代码强，开源生态成熟。</li>
+<li><strong>DeepSeek-R1（7B/14B）</strong>：推理能力强，做数学和逻辑题。</li>
+<li><strong>小尺寸（1.5B/3B）</strong>：老电脑也能跑，速度飞快。</li>
+</ul>
+
+<h2>硬件要求（实话实说）</h2>
+<p><strong>7B 模型</strong>：8GB 内存勉强，16GB 流畅，最好有 6GB+ 显存的独显。<strong>14B 模型</strong>：16GB 内存起步，最好 8GB+ 显存。<strong>70B 模型</strong>：消费级电脑基本跑不动，需要专业显卡。<strong>量力而行，从 7B 开始体验。</strong></p>
+
+<h2>怎么接入自己的应用</h2>
+<p>Ollama 自带 API 服务（默认端口 11434）。你的应用用 HTTP 调用，就能像用 OpenAI API 一样用本地模型。<strong>这意味着你可以在本地搭一个完全私有的"ChatGPT"。</strong>配合 Open WebUI 这类前端，体验和商业产品无异。</p>
+
+<h2>什么时候该用本地，什么时候用云</h2>
+<ul>
+<li><strong>数据敏感</strong>：医疗、金融、法律、内部文档——必须本地。</li>
+<li><strong>离线环境</strong>：断网、内网、出差——本地是唯一选择。</li>
+<li><strong>追求极致效果</strong>：本地 7B 干不过云端的 GPT-4，要效果还是得上云。</li>
+<li><strong>学习研究</strong>：本地随便玩，不烧 API 费。</li>
+</ul>`,
+    en: `<h2>Run a Private LLM on Your Own Machine</h2>
+<p>Ollama is the easiest local LLM deployment tool today. One command to install, one to pull a model, one to start chatting. Data never leaves your machine—fully private, permanently free. The first choice for sensitive enterprises and learning researchers.</p>
+
+<h2>Three Steps to Run</h2>
+<ul>
+<li><strong>Install</strong>: download from the official site (Win/Mac/Linux), click through.</li>
+<li><strong>Pull a model</strong>: <code>ollama run qwen2.5</code> (or llama3, deepseek-r1).</li>
+<li><strong>Chat</strong>: once downloaded, chat right in the terminal.</li>
+</ul>
+<p>Zero to usable in ten minutes. No Docker, no driver wrangling, no environment hell.</p>
+
+<h2>How to Pick a Model</h2>
+<ul>
+<li><strong>Qwen2.5 (7B)</strong>: best Chinese—daily chat and writing.</li>
+<li><strong>Llama 3.1 (8B)</strong>: strong English and code, mature ecosystem.</li>
+<li><strong>DeepSeek-R1 (7B/14B)</strong>: strong reasoning—math and logic.</li>
+<li><strong>Small (1.5B/3B)</strong>: runs on old machines, blazing fast.</li>
+</ul>
+
+<h2>Hardware (Honest Version)</h2>
+<p><strong>7B</strong>: 8GB RAM marginal, 16GB smooth, 6GB+ VRAM ideal. <strong>14B</strong>: 16GB RAM minimum, 8GB+ VRAM ideal. <strong>70B</strong>: consumer machines can't—needs pro GPUs. Start with 7B.</p>
+
+<h2>Integrate With Your Apps</h2>
+<p>Ollama ships an API service (default port 11434). Call it via HTTP and use the local model like OpenAI's API. This means a fully private "ChatGPT" on your machine. Pair with Open WebUI for a commercial-grade experience.</p>
+
+<h2>Local vs Cloud</h2>
+<ul>
+<li><strong>Sensitive data</strong>: medical, finance, legal, internal docs—local mandatory.</li>
+<li><strong>Offline</strong>: no internet, intranet, travel—local is the only option.</li>
+<li><strong>Max quality</strong>: local 7B can't beat cloud GPT-4—cloud for peak results.</li>
+<li><strong>Learning</strong>: play locally without burning API fees.</li>
+</ul>`
+  },
+
+  /* ===== end of batch-3 (20 articles) ===== */
 };

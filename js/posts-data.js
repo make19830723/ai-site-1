@@ -180,5 +180,126 @@ window.POSTS = [
     cover: "/images/llm-cost-optimization-2026.svg",
     title: { zh: "大模型推理成本优化：2026 年把 API 账单砍掉 80%", en: "LLM Inference Cost Optimization: Cut Your API Bill 80% in 2026" },
     description: { zh: "大模型用量上去了，账单也跟着涨。本文给出 6 个经过验证的降本手段：模型路由、提示缓存、上下文裁剪、批处理、蒸馏与缓存命中优化。", en: "As LLM usage scales, so does the bill. Six proven cost-cutting tactics: model routing, prompt caching, context pruning, batching, distillation, and cache hits." },
-    keywords: { zh: "大模型成本优化,API降本,LLM推理优化,模型路由,提示缓存", en: "LLM cost optimization,API cost reduction,LLM inference optimization,model routing,prompt caching" } }
+    keywords: { zh: "大模型成本优化,API降本,LLM推理优化,模型路由,提示缓存", en: "LLM cost optimization,API cost reduction,LLM inference optimization,model routing,prompt caching" } },
+
+  /* ===== 第三批 20 篇 AI 最新技术文章 (2026-06-10 ~ 2026-05-22) ===== */
+  { slug: "deepseek-r1-reasoning-model-guide", cat: "data", read: 7, date: "2026-06-10",
+    cover: "/images/deepseek-r1-reasoning-model-guide.svg",
+    title: { zh: "DeepSeek-R1 推理模型实测：开源界终于有了对标 o1 的选手", en: "DeepSeek-R1 Tested: The Open-Source Answer to OpenAI o1" },
+    description: { zh: "DeepSeek-R1 用强化学习训练出深度推理能力，完全开源且免费。本文实测它的数学、代码、逻辑题表现，并讲清何时该用它、何时不必。", en: "DeepSeek-R1 learns deep reasoning via reinforcement learning—fully open and free. We test it on math, code, and logic, and when (not) to use it." },
+    keywords: { zh: "DeepSeek-R1,深度推理模型,开源大模型,DeepSeek评测,o1对标", en: "DeepSeek-R1,reasoning model,open source LLM,DeepSeek review,o1 alternative" } },
+
+  { slug: "llama-4-meta-open-model", cat: "data", read: 6, date: "2026-06-09",
+    cover: "/images/llama-4-meta-open-model.svg",
+    title: { zh: "Llama 4 深度体验：Meta 开源旗舰能打过闭源吗", en: "Llama 4 Hands-On: Can Meta's Open Flagship Beat Closed Models?" },
+    description: { zh: "Llama 4 是 Meta 迄今最强的开源模型，原生多模态、超长上下文。本文对比它在中文、代码、视觉理解上与闭源模型的差距，给自部署团队选型参考。", en: "Llama 4 is Meta's strongest open model yet—native multimodal, long context. We compare it with closed models on Chinese, code, and vision for self-hosting teams." },
+    keywords: { zh: "Llama 4,Meta开源模型,Llama 4评测,开源大模型,Llama对比", en: "Llama 4,Meta open model,Llama 4 review,open LLM,Llama comparison" } },
+
+  { slug: "gpt-4o-image-generation-native", cat: "image", read: 6, date: "2026-06-08",
+    cover: "/images/gpt-4o-image-generation-native.svg",
+    title: { zh: "GPT-4o 原生图像生成实测：文字终于不崩，能直接出图了", en: "GPT-4o Native Image Generation Tested: Text Works, Ready to Ship" },
+    description: { zh: "GPT-4o 的原生图像生成（非 DALL·E）在文字渲染、风格延续、指令遵循上有质的飞跃。本文实测海报、信息图、多格漫画三类场景。", en: "GPT-4o's native image generation (not DALL·E) leaps ahead on text, style consistency, and instruction-following. Tests on posters, infographics, and comics." },
+    keywords: { zh: "GPT-4o图像生成,GPT-4o画图,原生生图,ChatGPT画图,AI海报", en: "GPT-4o image generation,GPT-4o drawing,native image,ChatGPT image,AI poster" } },
+
+  { slug: "devin-ai-software-engineer-review", cat: "coding", read: 7, date: "2026-06-07",
+    cover: "/images/devin-ai-software-engineer-review.svg",
+    title: { zh: "Devin AI 软件工程师实测：号称能独立交付，真的行吗", en: "Devin AI Software Engineer Tested: Can It Really Ship Alone?" },
+    description: { zh: "Devin 是 Cognition 推出的 AI 软件工程师，能自主规划、编码、调试、部署。本文用一个真实 GitHub issue 检验它的端到端交付能力，说清边界。", en: "Devin, Cognition's AI software engineer, claims to plan, code, debug, and deploy autonomously. We test it on a real GitHub issue and define its limits." },
+    keywords: { zh: "Devin AI,AI软件工程师,Cognition Devin,AI编程,Devin实测", en: "Devin AI,AI software engineer,Cognition Devin,AI coding,Devin review" } },
+
+  { slug: "replit-agent-cloud-coding-guide", cat: "coding", read: 6, date: "2026-06-06",
+    cover: "/images/replit-agent-cloud-coding-guide.svg",
+    title: { zh: "Replit Agent 云端编程：浏览器里从零搭一个能用的应用", en: "Replit Agent Cloud Coding: Build a Working App in the Browser" },
+    description: { zh: "Replit Agent 让你在浏览器里用一句话生成全栈应用，自带数据库和部署。本文演示从想法到上线的完整流程，适合零基础和快速原型。", en: "Replit Agent turns a sentence into a full-stack app in the browser, with database and deploy. A full idea-to-launch workflow for beginners and rapid prototyping." },
+    keywords: { zh: "Replit Agent,云端编程,Replit教程,AI全栈开发,在线编程", en: "Replit Agent,cloud coding,Replit tutorial,AI full-stack,online coding" } },
+
+  { slug: "windsurf-editor-ai-ide-review", cat: "coding", read: 6, date: "2026-06-05",
+    cover: "/images/windsurf-editor-ai-ide-review.svg",
+    title: { zh: "Windsurf 编辑器体验：Cascade 流式协作到底好不好用", en: "Windsurf Editor Review: Is Cascade Flow Collaboration Any Good?" },
+    description: { zh: "Windsurf 是 Codeium 推出的 AI IDE，主打 Cascade 流式协作。本文对比它与 Cursor 的差异，从代码理解、多文件改动到响应速度做横评。", en: "Windsurf, Codeium's AI IDE, centers on Cascade flow collaboration. We compare it with Cursor on code understanding, multi-file edits, and responsiveness." },
+    keywords: { zh: "Windsurf,Windsurf编辑器,Cascade,Codeium,AI IDE", en: "Windsurf,Windsurf editor,Cascade,Codeium,AI IDE" } },
+
+  { slug: "ai-presentation-gamma-guide", cat: "office", read: 6, date: "2026-06-04",
+    cover: "/images/ai-presentation-gamma-guide.svg",
+    title: { zh: "用 AI 做 PPT 实战：Gamma 一键生成专业演示文稿", en: "Make Presentations with AI: Generate Pro Decks in One Click with Gamma" },
+    description: { zh: "AI 做 PPT 已从玩具变成生产力。本文以 Gamma 为主，演示从大纲到成稿的完整流程，对比 Tome、美图等工具，并讲清企业汇报的修改要点。", en: "AI-made decks have gone from toy to tool. Using Gamma, we demo outline-to-final workflow, compare Tome and others, and cover enterprise edits." },
+    keywords: { zh: "AI做PPT,Gamma,AI演示文稿,AI PPT生成,PPT自动生成", en: "AI presentation,Gamma,AI slide deck,AI PPT,PPT auto generation" } },
+
+  { slug: "ai-mind-map-napkin-whimsical", cat: "office", read: 6, date: "2026-06-03",
+    cover: "/images/ai-mind-map-napkin-whimsical.svg",
+    title: { zh: "AI 思维导图与可视化：Napkin、Whimsical 怎么选", en: "AI Mind Maps and Visualization: Napkin vs Whimsical" },
+    description: { zh: "AI 正在重塑思维可视化。本文实测把一段文字变成思维导图、流程图、信息图的完整流程，对比 Napkin 的图文和 Whimsical 的协作。", en: "AI is reshaping visual thinking. We test turning text into mind maps, flowcharts, and infographics, comparing Napkin's visuals and Whimsical's collaboration." },
+    keywords: { zh: "AI思维导图,Napkin,Whimsical,AI流程图,思维可视化", en: "AI mind map,Napkin,Whimsical,AI flowchart,visual thinking" } },
+
+  { slug: "chatgpt-advanced-data-analysis", cat: "data", read: 7, date: "2026-06-02",
+    cover: "/images/chatgpt-advanced-data-analysis.svg",
+    title: { zh: "ChatGPT 高级数据分析：上传表格直接对话出洞察", en: "ChatGPT Advanced Data Analysis: Upload a Spreadsheet, Chat for Insights" },
+    description: { zh: "ChatGPT 的高级数据分析能直接读 Excel、跑 Python、画图表。本文用一个真实销售数据集演示从清洗到可视化的全过程，并指出它的局限。", en: "ChatGPT's Advanced Data Analysis reads Excel, runs Python, and charts. We demo cleaning-to-visualization on real sales data and flag its limits." },
+    keywords: { zh: "ChatGPT数据分析,高级数据分析,AI数据分析,ChatGPT画图,数据分析AI", en: "ChatGPT data analysis,advanced data analysis,AI data analysis,ChatGPT charts,data analysis AI" } },
+
+  { slug: "ai-virtual-tryon-ecommerce", cat: "image", read: 6, date: "2026-06-01",
+    cover: "/images/ai-virtual-tryon-ecommerce.svg",
+    title: { zh: "AI 虚拟试衣与模特换装：电商降本的新玩法", en: "AI Virtual Try-On and Model Swap: E-Commerce's New Cost Cutter" },
+    description: { zh: "AI 虚拟试衣让用户上传照片就能试穿，商家也能用 AI 模特替代实拍。本文讲清技术原理、主流工具、商品一致性的难点和合规边界。", en: "AI try-on lets users upload a photo to fit clothes; merchants use AI models instead of shoots. Tech, tools, product-consistency challenges, and compliance." },
+    keywords: { zh: "AI试衣,虚拟试穿,AI模特,电商AI,换装AI", en: "AI try-on,virtual try-on,AI model,e-commerce AI,outfit swap AI" } },
+
+  { slug: "ai-livestream-setup-guide", cat: "video", read: 8, date: "2026-05-31",
+    cover: "/images/ai-livestream-setup-guide.svg",
+    title: { zh: "AI 数字人直播搭建全流程：从零开播到稳定带货", en: "AI Virtual Livestream Setup: From Zero to Stable Selling" },
+    description: { zh: "AI 数字人直播已成标配。本文手把手讲清选型、形象定制、话术生成、直播中控、平台规则，附一份能跑通的设备与软件清单。", en: "AI virtual livestreaming is now standard. A hands-on guide to selection, avatar, script generation, control, platform rules, plus a runnable gear and software list." },
+    keywords: { zh: "AI数字人直播,数字人带货,虚拟主播,AI直播搭建,无人直播", en: "AI virtual livestream,virtual selling,virtual host,AI livestream setup,unmanned livestream" } },
+
+  { slug: "runway-gen-4-video-guide", cat: "video", read: 6, date: "2026-05-30",
+    cover: "/images/runway-gen-4-video-guide.svg",
+    title: { zh: "Runway Gen-4 实测：角色一致性与运动控制的新高度", en: "Runway Gen-4 Tested: New Heights in Character Consistency and Motion" },
+    description: { zh: "Runway Gen-4 在角色跨镜头一致性、运动方向控制上进步明显。本文实测它的文生视频、图生视频、运动笔刷，并和 Sora 2 做了同题对比。", en: "Runway Gen-4 improves cross-shot character consistency and motion control. We test text-to-video, image-to-video, motion brush, and compare with Sora 2." },
+    keywords: { zh: "Runway Gen-4,Runway视频,Gen-4实测,AI视频,Runway教程", en: "Runway Gen-4,Runway video,Gen-4 test,AI video,Runway tutorial" } },
+
+  { slug: "pika-2-video-generation", cat: "video", read: 5, date: "2026-05-29",
+    cover: "/images/pika-2-video-generation.svg",
+    title: { zh: "Pika 2.0 视频生成：特效与创意玩法的小而美选手", en: "Pika 2.0 Video Generation: The Compact Creative Effects Champion" },
+    description: { zh: "Pika 2.0 主打特效和创意玩法（膨胀、爆炸、融化），上手快、出片有趣。本文实测它的创意特效，并给出适合的内容创作场景。", en: "Pika 2.0 focuses on effects and creative play (inflate, explode, melt)—fast and fun. We test its creative effects and fitting content scenarios." },
+    keywords: { zh: "Pika 2.0,Pika视频,AI视频特效,Pika教程,创意视频", en: "Pika 2.0,Pika video,AI video effects,Pika tutorial,creative video" } },
+
+  { slug: "ai-voiceover-tts-commercial", cat: "audio", read: 6, date: "2026-05-28",
+    cover: "/images/ai-voiceover-tts-commercial.svg",
+    title: { zh: "AI 配音商用指南：TTS 工具选型与版权避坑", en: "AI Voiceover for Commerce: TTS Tool Selection and Copyright Pitfalls" },
+    description: { zh: "AI 配音已能替代大部分非真人配音场景。本文对比主流 TTS 工具的音色、价格、商用授权，并讲清声音版权、平台审核的合规要点。", en: "AI voiceover now replaces most non-human narration. We compare major TTS tools on voice, price, and licensing, plus copyright and platform compliance." },
+    keywords: { zh: "AI配音,TTS商用,语音合成,AI配音工具,配音版权", en: "AI voiceover,TTS commercial,speech synthesis,AI voiceover tool,voiceover copyright" } },
+
+  { slug: "ai-translation-subtitle-realtime", cat: "audio", read: 6, date: "2026-05-27",
+    cover: "/images/ai-translation-subtitle-realtime.svg",
+    title: { zh: "AI 翻译与实时字幕：跨境内容出海的效率引擎", en: "AI Translation and Real-Time Subtitles: The Efficiency Engine for Going Global" },
+    description: { zh: "AI 翻译让视频字幕、会议同传、文档翻译效率翻倍。本文实测中英、中日、中葡翻译质量，讲清字幕生成、术语库、人工校对的最佳实践。", en: "AI translation doubles efficiency for subtitles, meeting interpretation, and documents. We test Chinese-English/Japanese/Portuguese quality and best practices." },
+    keywords: { zh: "AI翻译,实时字幕,AI同传,视频字幕翻译,出海翻译", en: "AI translation,real-time subtitle,AI interpretation,video subtitle translation,global translation" } },
+
+  { slug: "openai-operator-browser-agent", cat: "office", read: 6, date: "2026-05-26",
+    cover: "/images/openai-operator-browser-agent.svg",
+    title: { zh: "OpenAI Operator 浏览器 Agent：让 AI 替你操作网页", en: "OpenAI Operator Browser Agent: Let AI Operate Web Pages for You" },
+    description: { zh: "Operator 是 OpenAI 的浏览器 Agent，能订机票、填表、比价。本文实测它的任务完成率，讲清它能干什么、干不好什么，以及安全边界。", en: "Operator is OpenAI's browser agent—it books flights, fills forms, compares prices. We test its task completion rate and define what it can and can't do." },
+    keywords: { zh: "OpenAI Operator,浏览器Agent,网页自动化,Operator实测,AI操作网页", en: "OpenAI Operator,browser agent,web automation,Operator test,AI web operation" } },
+
+  { slug: "ai-excel-copilot-pro-guide", cat: "office", read: 6, date: "2026-05-25",
+    cover: "/images/ai-excel-copilot-pro-guide.svg",
+    title: { zh: "AI 玩转 Excel：Copilot Pro 让公式与图表开口说话", en: "Master Excel with AI: Copilot Pro Makes Formulas and Charts Talk" },
+    description: { zh: "Excel 里的 Copilot 能用自然语言写公式、做透视、画图表。本文演示 VLOOKUP、条件格式、动态图表的对话式操作，告别死记函数。", en: "Excel's Copilot writes formulas, pivots, and charts from natural language. We demo VLOOKUP, conditional formatting, and dynamic charts—no more memorizing functions." },
+    keywords: { zh: "AI Excel,Copilot Pro,Excel AI,Excel公式,智能表格", en: "AI Excel,Copilot Pro,Excel AI,Excel formula,smart spreadsheet" } },
+
+  { slug: "mcp-model-context-protocol-explained", cat: "data", read: 7, date: "2026-05-24",
+    cover: "/images/mcp-model-context-protocol-explained.svg",
+    title: { zh: "MCP 协议通俗解释：让大模型连上你所有工具的 USB 接口", en: "MCP Explained: The USB Port That Connects LLMs to All Your Tools" },
+    description: { zh: "Anthropic 推出的 MCP（模型上下文协议）正成为 AI 连接外部工具的标准。本文用大白话讲清它的原理，并演示接数据库、文件、API 的实操。", en: "Anthropic's MCP (Model Context Protocol) is becoming the standard for AI-to-tool connections. A plain-language explainer plus hands-on database, file, and API hooks." },
+    keywords: { zh: "MCP协议,模型上下文协议,Anthropic MCP,AI工具连接,MCP教程", en: "MCP protocol,Model Context Protocol,Anthropic MCP,AI tool connection,MCP tutorial" } },
+
+  { slug: "perplexity-ai-search-deep-guide", cat: "marketing", read: 6, date: "2026-05-23",
+    cover: "/images/perplexity-ai-search-deep-guide.svg",
+    title: { zh: "Perplexity 深度使用指南：把 AI 搜索用出研究助手的水平", en: "Perplexity Deep Guide: Use AI Search Like a Research Assistant" },
+    description: { zh: "Perplexity 不只是 AI 搜索，它的 Focus、Collections、Pro Search 能力很强。本文讲清高阶用法，帮你做调研、写报告、跟踪行业动态。", en: "Perplexity is more than AI search—Focus, Collections, and Pro Search are powerful. A high-level guide for research, reports, and industry tracking." },
+    keywords: { zh: "Perplexity,AI搜索引擎,Perplexity教程,AI搜索,Perplexity Pro", en: "Perplexity,AI search engine,Perplexity tutorial,AI search,Perplexity Pro" } },
+
+  { slug: "ollama-local-llm-deployment", cat: "coding", read: 7, date: "2026-05-22",
+    cover: "/images/ollama-local-llm-deployment.svg",
+    title: { zh: "Ollama 本地部署大模型：在自己电脑上跑私有大模型", en: "Ollama Local LLM Deployment: Run a Private LLM on Your Own Machine" },
+    description: { zh: "Ollama 让你在笔记本上跑起 Llama、Qwen、DeepSeek 等开源大模型，数据不出本机。本文讲清安装、模型选择、硬件要求与 API 接入。", en: "Ollama runs Llama, Qwen, DeepSeek on your laptop with data never leaving. Install, model selection, hardware needs, and API integration." },
+    keywords: { zh: "Ollama,本地大模型,私有化部署,本地LLM,Ollama教程", en: "Ollama,local LLM,private deployment,local LLM,Ollama tutorial" } }
 ];
